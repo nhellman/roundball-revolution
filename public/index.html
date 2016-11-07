@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="kB">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title data-ng-bind="page.title"></title>
+    <link rel="icon" type="image/svg+xml" sizes="any" href="images/basketball.svg"/>
+    <base href="/">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="stylesheets/bootstrap.css">
+
+    <!-- Custom styles for this template -->
+    <link href="stylesheets/style.css" rel="stylesheet">
+
+    <!-- navigation -->
+    <link href="stylesheets/navigation.css" rel="stylesheet">
+
+    <!-- textAngular styles -->
+    <link rel='stylesheet' href='/bower_components/textAngular/dist/textAngular.css'>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href='bower_components/components-font-awesome/css/font-awesome.min.css'>
+
+    <!-- oi.select -->
+    <link rel="stylesheet" href="bower_components/oi.select/dist/select.min.css">
+
+    <!-- animate.css -->
+    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700|PT+Serif:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Glegoo:400,700|Open+Sans:400,700" rel="stylesheet">
+
+
+  </head>
+
+  <body>
+
+    <div class="main-container">
+
+      <div class="overlay"></div>
+        <header class="">
+          <div class="navBtn">+</div>
+          <nav>
+            <a href="/">Home</a>
+            <a href="/articles/type/posts">Posts</a>
+            <a href="/articles/type/newsflash">Newsflash</a>
+            <a href="/articles/type/breakdown">Breakdown</a>
+            <a href="/articles/type/analysis">Analysis</a>
+            <a href="/articles/type/feature">Features</a>
+            <a href="/articles/category/nba">NBA</a>
+            <a href="/articles/category/basketball">Basketball</a>
+            <a href="">Contact</a>
+            <a href="/backend">Backend</a>
+            <div class="site-info">
+              <h3 class="capped">Roundball Revolution</h3>
+              <p>&copy; 2016  | Created by <a href="www.natehellman.com">Nate Hellman</a></p>
+            </div>
+
+          </nav>
+        </header>
+
+        <div class="logo-overlay">
+          <div id="triangle-topright"></div>
+          <a href="/"><img src="images/RoundballLogo-New.svg" alt="" /></a>
+        </div>
+
+      <div class="container container-content">
+
+        <div class="ng-view"></div>
+
+        <div class="footer crack-top">
+          <div class="row">
+              <div class="col-xs-12">
+                <div class="col-md-6">
+                  <a href="/"><img class="threequartersize" src="images/RoundballLogo-Small-Blue.svg" alt="" /></a>
+                </div>
+                  <div class="col-md-6">
+                    <a href="https://www.facebook.com/roundballrevolution"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                    <a href="https://twitter.com/hoopsrevolution"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                    <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+                    <a href="mailto:roundballrevolution@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+      </div><!-- /.container -->
+
+    </div> <!--main-->
+
+    <script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyD0PbqD8_X8afYokyR_l06n-1D7I4Pf3ew",
+        authDomain: "roundball-revolution.firebaseapp.com",
+        databaseURL: "https://roundball-revolution.firebaseio.com",
+        storageBucket: "roundball-revolution.appspot.com",
+        messagingSenderId: "575895602720"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <!-- Angular/Bootstrap/Third-Party -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/textAngular/dist/textAngular-rangy.min.js"></script>
+    <script src="bower_components/textAngular/dist/textAngular-sanitize.min.js"></script>
+    <script src="bower_components/textAngular/dist/textAngular.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/oi.select/dist/select-tpls.min.js"></script>
+    <script src="bower_components/ng-twitter-api/dist/ng-twitter-api.min.js"></script>
+    <script src="bower_components/ngCordova/dist/ng-cordova.min.js"></script>
+    <script src="bower_components/angularUtils-disqus/dirDisqus.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-moment/0.9.0/angular-moment.min.js"></script>
+    <script src="app.js"></script>
+    <script src="javascript/roundball.js"></script>
+    <script src="javascript/twitter.js"></script>
+    <!--Services-->
+    <script src="services/services.js"></script>
+    <!--Controllers-->
+    <script src="controllers/home.controllers.js"></script>
+    <script src="controllers/articles.controllers.js"></script>
+    <script src="controllers/authors.controllers.js"></script>
+    <script src="controllers/tags.controllers.js"></script>
+    <script src="controllers/categories.controllers.js"></script>
+    <script src="controllers/users.controllers.js"></script>
+    <!--Disqus-->
+    <script id="dsq-count-scr" src="//roundballrevolution.disqus.com/count.js" async></script>
+
+  </body>
+</html>

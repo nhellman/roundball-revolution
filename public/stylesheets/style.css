@@ -1,0 +1,944 @@
+/*GENERAL*/
+
+.center-block {
+  float: none;
+}
+
+.center {
+  text-align: center;
+}
+
+body {
+  background: #fff!important;
+  background-color: #fff!important;
+  background-position: center 36px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'PT Sans', sans-serif;
+  list-style: none;
+}
+
+/*MARGINS*/
+
+.clearout-top {
+  margin-top: 200px;
+}
+
+.spacer-top {
+  margin-top: 150px;
+}
+
+.room-top {
+  margin-top: 100px;
+}
+
+.sliver-top {
+  margin-top: 50px;
+}
+
+.crack-top {
+  margin-top: 25px;
+}
+
+.ten-top {
+  margin-top: 10px;
+}
+
+.no-margin-top {
+  margin-top: 0;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+/*PADDINGS*/
+
+.clearout-top-padding {
+  padding-top: 200px;
+}
+
+.spacer-top-padding {
+  padding-top: 150px;
+}
+
+.room-top-padding {
+  padding-top: 100px;
+}
+
+.sliver-top-padding {
+  padding-top: 50px;
+}
+
+.crack-top-padding {
+  padding-top: 25px;
+}
+
+.ten-top-padding {
+  padding-top: 10px;
+}
+
+.no-padding-top {
+  padding-top: 0;
+}
+
+.no-padding-bottom {
+  padding-bottom: 0;
+}
+
+.crack-bottom-padding {
+  padding-bottom: 25px;
+}
+
+/*BORDERS*/
+
+.border-top {
+  border-top: solid 2px #ecf0f1;
+}
+
+.border-bottom {
+  border-bottom: solid 2px #ecf0f1;
+}
+
+/*IMAGE SIZE */
+
+img {
+  width: 100%;
+}
+
+img.threequartersize {
+  width: 75%;
+}
+
+img.mediumsize {
+  width: 50%;
+}
+
+img.quartersize {
+  width: 25%;
+}
+
+img.tenthsize {
+  width: 10%;
+}
+
+/*FOOBAR*/
+
+.footer {
+  background: #ecf0f1;
+  padding: 3px;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+.social:hover {
+     -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+     -o-transform: scale(1.1);
+ }
+ .social {
+     -webkit-transform: scale(0.8);
+     /* Browser Variations: */
+
+     -moz-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+     -o-transition-duration: 0.5s;
+ }
+
+ #social-fb {
+  color: #18bc9c;
+
+ }
+ #social-tw {
+  color: #18bc9c;
+ }
+ #social-gp {
+  color: #18bc9c;
+ }
+ #social-em {
+  color: #18bc9c;
+}
+
+/*CONTAINER*/
+
+.container-content {
+  width: 95%;
+}
+
+.container {
+  margin-left: 5%;
+  margin-right: inherit;
+}
+
+/*ROW*/
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/*ARTICLE*/
+
+.label-info {
+  padding: .3em .6em .3em;
+  border: 2px solid #2c3e50;
+  background: transparent;
+}
+
+.article {
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.spacer-bottom {
+  margin-bottom: 10px;
+}
+
+.backend-header {
+  margin-bottom: 20px;
+}
+
+.capped {
+  text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.blue {
+  color: #2c3e50;
+}
+
+.green {
+  color: #18bc9c;
+}
+
+.white {
+  color: #fff;
+}
+
+.tag .label a {
+  color: #2c3e50 !important;
+  font-size: 1.3rem;
+}
+
+.tag .label a:hover {
+  color: #2c3e50 !important;
+}
+
+.team-logo img {
+  width: 15%;
+}
+
+.tag-photo {
+  width: 100px;
+}
+
+/*FONTS*/
+
+.serif {
+  /*font-family: 'Glegoo', serif;*/
+  font-family: 'PT Serif', serif;
+
+}
+
+.sans {
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: 'PT Sans', sans-serif;
+
+}
+
+/*PADDING*/
+
+.no-padding-left {
+  padding-left: 0;
+}
+
+
+/*HOME*/
+
+.card {
+  border: solid #c2c2c2 1px;
+  border-radius: 5px;
+  padding: 0;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);
+}
+
+.card:hover {
+  background: rgba(204, 204, 204, 0.2);
+}
+
+.card .content {
+  padding: 15px;
+}
+
+.card .overlay-content {
+  position: absolute;
+  bottom: 0px;
+  max-width: 75%;
+  margin-bottom: 0px;
+}
+
+.card .date {
+  font-size: 13px;
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+}
+
+.card h3 {
+  margin-top: 5px;
+  font-size: 1.6em;
+}
+
+.card h5 {
+  margin-bottom: 2px;
+}
+
+.card img.scale {
+  border-radius: 5px 5px 0px 0px;
+}
+
+.card .author-pic {
+  width: 15%;
+}
+
+.card .author, .card .comment-count a {
+  font-size: 1.25rem;
+  color: #c2c2c2 !important;
+}
+
+.card .storyinfo {
+  margin-top: 10px;
+  font-size: .75em;
+}
+
+.card .category a {
+  color: #2c3e50;
+}
+
+.featured .overlay-content {
+  position: absolute;
+  left: 25%;
+  bottom: 110px;
+  padding: 10px;
+  max-width: 50%;
+  margin-bottom: 0px;
+  color: #fff;
+}
+
+.category-marker {
+  background: #2c3e50;
+  display: inline;
+  padding: 2px 2px 0px 2px;
+}
+
+.category-marker a {
+  color: #fff;
+}
+
+.featured .storyinfo {
+  color: #fff;
+}
+
+.featured h1 {
+  padding-bottom: 20px;
+  margin-top: 10px;
+  border-bottom: 1px solid #c2c2c2;
+}
+
+.featured h1 a {
+  color: #fff;
+}
+
+.crop-height-featured {
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.crop-height-secondary {
+  max-height: 200px;
+  overflow: hidden;
+}
+
+img.scale {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto !important;
+  display: block;
+  -ms-interpolation-mode: bicubic;
+}
+
+.flip {
+	-webkit-transform: rotate(360deg);
+	-moz-transform:    rotate(360deg);
+	-ms-transform:     rotate(360deg);
+	-o-transform:      rotate(360deg);
+	transform:         rotate(360deg);
+	/* needed? not sure */
+	zoom: 1;
+}
+
+img.flip {
+	/* actually, aligns left within .cropheight */
+  float: right;
+	/* clearfix after? */
+}
+
+/*FEATURED*/
+
+.main {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(#);
+  min-height: 600px;
+}
+
+.main h5 a {
+  color: #fff;
+}
+
+.main h1 {
+  font-size: 4rem;
+}
+
+.main {
+  padding: 0;
+}
+
+/*SECONDARY*/
+
+.home-container {
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-bottom: 50px;
+}
+
+.secondary {
+  margin-top: 10px;
+}
+
+.secondary .overlay-text {
+  background: #18bc9c;
+  color: #fff;
+}
+
+.secondary .tag .label {
+  display: inline;
+  float: left;
+  margin-bottom: 0;
+  margin-right: 10px;
+  background: #000;
+  font-size: 68%;
+}
+
+.article .block {
+  margin-bottom: 20px;
+  max-width: 31.2%;
+  margin-right: 1%;
+  margin-left: 1%;
+  height: 375px;
+}
+
+/*CALLOUT*/
+
+.crop-height-callout {
+  max-height: 250px;
+  overflow: hidden;
+}
+
+.callout-post h2 {
+  margin-top: 10px;
+}
+
+.callout-post .content {
+  margin-top: 15px;
+  position: relative;;
+  bottom: 0px;
+  max-width: 75%;
+  margin-bottom: 0px;
+}
+
+.callout-post .content .category-marker {
+  background: #2c3e50;
+}
+
+.category-marker-large {
+  position: absolute;
+  z-index: 100;
+  top: 0px;
+  font-size: 4rem;
+  padding: 5px 5px 0px 5px;
+}
+
+.category-marker-small {
+  position: absolute;
+  z-index: 100;
+  bottom: 10px;
+  left: 10px;
+  font-size: 1.5rem;
+  padding: 5px 5px 2.5px 5px;
+  margin: 0;
+}
+
+.callout-post .card {
+  padding-top: 0px;
+  margin-bottom: 20px;
+}
+
+/*TEAM TAG HOME */
+
+.division {
+  margin-top: 40%;
+  color: #18bc9c;
+}
+
+.team-tag .row {
+  padding-bottom: 20px;
+}
+
+/* ARTICLE */
+
+.main-article {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(#);
+  min-height: 550px;
+  overflow: hidden;
+}
+
+.author-pic {
+  width: 9%;
+  margin-right: 10px;
+  box-shadow: 1px 1px 1px .5px rgba(0, 0, 0, 0.2);
+}
+
+/*RANKS*/
+
+.ranks {
+  padding: 30px;
+  background: #18bc9c;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.ranks .col-sm-3 {
+    width: 20%;
+}
+
+.ranks a {
+  color: #fff;
+}
+
+h2.rank-title {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ranks .player-rank-number {
+  padding: 10px 15px;
+  background: #2c3e50;
+}
+
+.ranks h2, .extras h2 {
+  margin-top: 17px
+}
+
+
+/*EXTRAS*/
+
+.extras {
+  height: 580px;
+  overflow: hidden;
+}
+
+/*TWITTER*/
+
+.timeline-Widget {
+  max-width: 100%;
+}
+
+.headline {
+  font-size: 5.5rem;
+  font-weight: 700;
+}
+
+.body-container .blurb {
+  font-size: 2.5rem;
+}
+
+.author {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.body {
+  font-size: 2rem;
+}
+
+.credit {
+  font-style: italic;
+  display: inline;
+  margin-left: 5px;
+}
+
+.more-content {
+  background: #18bc9c;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.more-content a {
+  color: #fff;
+}
+
+.body-container .card:hover {
+  background: #18bc9c;
+}
+
+.more-content h3 {
+  margin: 0px;
+  display: inline-block;
+  background: #2c3e50;
+  color: #fff;
+  padding: 10px;
+}
+
+.content-list-item {
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+div.content-list-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0px;
+}
+
+.content-list-item .category-marker {
+  background: #2c3e50;
+
+}
+
+.content-list-item .category-marker a {
+  color: #fff !important;
+}
+
+.tag {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/*CATEGORY*/
+
+.heading {
+  color: #2c3e50;
+  text-transform: uppercase;
+  font-size: 60px;
+}
+
+.section-heading {
+  color: #fff;
+  background: #2c3e50;
+  padding: 3px;
+}
+
+/*AUTHOR*/
+
+.oversized-heading {
+  text-align: center;
+  background: #ecf0f1;
+  background: url('http://roundballrevolution/images/header-background-green.png');
+  background-size: cover;
+  border-bottom: solid 8px #2c3e50;
+}
+
+.oversized-heading h4.player-rank {
+  color: #2c3e50;
+  display: inline-block;
+  padding: 4px;
+  margin-bottom: 5px;
+}
+
+.player-rank-number {
+  background: #18bc9c;
+  color: #fff;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.oversized-heading-author {
+  padding-bottom: 30px;
+  text-align: center;
+  background: #18bc9c;
+  padding-top: 120px;
+  margin-bottom: 30px;
+}
+
+.oversized-heading .info {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.oversized-heading .name-info {
+  margin-top: 180px;
+}
+
+.oversized-heading .name-info h1 {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.heading-ranking-section {
+  background: #2c3e50;
+  text-align: center;
+  color: #fff;
+}
+
+.heading-ranking-section h4 {
+  font-size: 16px;
+}
+
+.ranking-info {
+  margin-top: 12px;
+}
+
+.ranking-info .player-rank-number {
+  padding: 7px;
+}
+
+.ranking-info h4 {
+  font-size: 12px;
+}
+
+.author-heading h2 {
+  color: #fff;
+}
+
+
+/*BACKEND*/
+
+.backend-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+oi-select .select-search-list-item_selection {
+  background: transparent;
+  border-color: #2c3e50;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+oi-select .select-search-list-item_selection .close {
+  color: #2c3e50;
+}
+
+/*MARKER COLORS TYPES*/
+
+.color-type-feature .category-marker {
+  background: #0F586C;
+  color: #0F586C;
+}
+
+.color-type-post .category-marker {
+  background: #008348;
+  color: #008348;
+}
+
+.color-type-newsflash .category-marker {
+  background: #E03A3E;
+  color: #E03A3E;
+}
+
+.color-type-breakdown .category-marker {
+  background: #CE1141;
+  color: #CE1141;
+}
+
+.color-type-analysis .category-marker{
+  background: #552582;
+  color: #552582;
+}
+
+.color-type-podcast .category-marker {
+  background: #F58426;
+  color: #F58426;
+}
+
+.color-type-infographic .category-marker {
+  background: #1D1160;
+  color: #1D1160;
+}
+
+/*MARKER COLORS CATEGORIES*/
+
+.color-category-nba .category-marker {
+  background: #E03A3E;
+  color: #E03A3E;
+}
+
+.color-category-basketball .category-marker {
+  background: #F58426;
+  color: #F58426;
+}
+
+.color-category-sports .category-marker {
+  background: #008348;
+  color: #008348;
+}
+
+.color-category-ncaa .category-marker {
+  background: #0F586C;
+  color: #0F586C;
+}
+
+.color-category-data .category-marker {
+  background: #007DC3;
+  color: #007DC3;
+}
+
+/*MARKER COLORS TEAMS*/
+
+.color-hawks .category-marker, .color-hawks .comment-count {
+  background: #E13A3E;
+}
+
+.color-celtics .category-marker, .color-celtics .comment-count {
+  background: #008348;
+}
+
+.color-nets .category-marker, .color-nets .comment-count {
+  background: #061922;
+}
+
+.color-hornets .category-marker, .color-hornets .comment-count {
+  background: #1D1160;
+}
+
+.color-bulls .category-marker, .color-bulls .comment-count {
+  background: #CE1141;
+}
+
+.color-cavs .category-marker, .color-cavs .comment-count {
+  background: #860038;
+}
+
+.color-mavs .category-marker, .color-mavs .comment-count {
+  background: #007DC5;
+}
+
+.color-nuggets .category-marker, .color-nuggets .comment-count {
+  background: #4D90CD;
+}
+
+.color-pistons .category-marker, .color-pistons .comment-count {
+  background: #ED174C;
+}
+
+.color-warriors .category-marker, .color-warriors .comment-count {
+  background: #FDB927;
+}
+
+.color-rockets .category-marker, .color-rockets .comment-count {
+  background: #CE1141;
+}
+
+.color-pacers .category-marker, .color-pacers .comment-count {
+  background: #FFC633;
+}
+
+.color-clips .category-marker, .color-clips .comment-count {
+  background: #ED174C;
+}
+
+.color-lakers .category-marker, .color-lakers .comment-count {
+  background: #552582;
+}
+
+.color-grizzlies .category-marker, .color-grizzlies .comment-count {
+  background: #0F586C;
+}
+
+.color-heat .category-marker, .color-heat .comment-count {
+  background: #98002E;
+}
+
+.color-bucks .category-marker, .color-bucks .comment-count {
+  background: #00471B;
+}
+
+.color-twolves .category-marker, .color-twolves .comment-count {
+  background: #005083;
+}
+
+.color-pelicans .category-marker, .color-pelicans .comment-count {
+  background: #002B5C;
+}
+
+.color-knicks .category-marker, .color-knicks .comment-count {
+  background: #F58426;
+}
+
+.color-thunder .category-marker, .color-thunder .comment-count {
+  background: #007DC3;
+}
+
+.color-sixers .category-marker, .color-magic .comment-count {
+  background: #ED174C;
+}
+
+.color-suns .category-marker, .color-suns .comment-count {
+  background: #E56020;
+}
+
+.color-blazers .category-marker, .color-blazers .comment-count {
+  background: #E03A3E;
+}
+
+.color-kings .category-marker, .color-kings .comment-count {
+  background: #724C9F;
+}
+
+.color-spurs .category-marker, .color-spurs .comment-count {
+  background: #061922;
+}
+
+.color-raptors .category-marker, .color-raptors .comment-count {
+  background: #CE1141;
+}
+
+.color-jazz .category-marker, .color-jazz .comment-count {
+  background: #00471B;
+}
+
+.color-wizards .category-marker, .color-wizards .comment-count {
+  background: #E31837;
+}

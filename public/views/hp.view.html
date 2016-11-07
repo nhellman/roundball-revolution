@@ -1,0 +1,136 @@
+<div ng-controller="HomeCtrl">
+  <div class="row featured">
+    <div ng-repeat="article in articles.slice().reverse() | limitTo: 1">
+      <div class="col-md-12 main">
+        <div class="article">
+          <div class="crop-height-featured flip"><a href="/{{article.type}}/{{article.category}}/{{article.slug}}"><img class="scale flip" ng-src={{article.image}}></a></div>
+          <div class="transparency"></div>
+          <div class="overlay-content text-center">
+            <h5 class="category-marker capped"><a href="/articles/category/{{article.category}}">{{article.category}}</a></h5>
+            <h1 class="capped"><a data-disqus-identifier="article._id" href="/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h1>
+            <a data-disqus-identifier="{{article._id}}" href="/{{article.type}}/{{article.category}}/{{article.slug}}#disqus_thread"></a>
+            <div class="storyinfo">
+              <p><a href="/articles/author/{{article.author}}"><em>{{article.author}}</em></a></p>
+              <p><i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="home-container">
+    <div class="row">
+      <div class="col-md-8">
+        <h2 class="capped bold">the latest</h2>
+        <div ng-repeat="article in articles.slice(0, articles.length - 1).reverse() | limitTo: 8">
+            <div class="content-square">
+              <div class="circle-background">
+                <a href="/articles/type/{{type}}" class="ng-binding"><span class="glyphicon glyphicon-flash"></span></a>
+              </div>
+              <div class="crop-height-secondary flip"><a href="/{{article.type}}/{{article.category}}/{{article.slug}}"><img class="scale flip" ng-src={{article.image}}></a></div>
+                <h4><a href="/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h4>
+                <p class="storyinfo">
+                  <span class="date"><i class="fa fa-clock-o"></i> {{article.date | date: 'mediumDate'}} {{article.date | date: 'h:mma'}}</span> |
+                  <span class="category capped"><a href="/articles/category/{{article.category}}">{{article.category}}</a></span>
+                </p>
+              </div>
+            </div>
+      </div>
+      <div class="col-md-4">
+        <h2 class="capped bold">the best</h2>
+        <div ng-repeat="article in articles.slice(0, articles.length - 11).reverse() | limitTo: 4" ng-if="article.type == 'feature' || article.type == 'analysis' || article.type == 'breakdown' || article.type == 'newsflash' || article.type == 'podcast' || article.type == 'infographic' && article.featured == 'yes'">
+            <div class="best-post">
+              <div class="article">
+                <h5 class="category-marker-large category-marker capped"><a href="/articles/type/{{type}}" class="ng-binding">{{article.type}}</a></h5>
+                <div class="overlay-content text-center">
+                  <h5 class="category-marker capped"><a href="/articles/category/{{article.category}}">{{article.category}}</a></h5>
+                  <h2 class="capped"><a href="/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h2>
+                  <div class="storyinfo">
+                    <p><a href="/articles/author/{{article.author}}"><em>{{article.author}}</em></a> | <i class="fa fa-clock-o"></i> {{article.date | date: 'fullDate'}} <span>{{article.date | date: 'h:mma'}}</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+      <div class="team-tag">
+        <h2 class="capped bold">the teams</h2>
+        <div class="tags row">
+          <div class="col-md-2 capped">
+            <h3 class="division">northwest</h3>
+          </div>
+          <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.division == 'northwest' && tag.type == 'team'">
+            <div class="col-md-2">
+              <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+              <h4 class="text-center capped bold"><a class="blue" href="/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+            </div>
+          </div>
+        </div>
+        <div class="tags row">
+          <div class="col-md-2 capped">
+            <h3 class="division">pacific</h3>
+          </div>
+          <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.division == 'pacific' && tag.type == 'team'">
+            <div class="col-md-2">
+              <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+              <h4 class="text-center capped bold"><a class="blue" href="/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+            </div>
+          </div>
+        </div>
+        <div class="tags row">
+          <div class="col-md-2 capped">
+            <h3 class="division">southwest</h3>
+          </div>
+          <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.division == 'southwest' && tag.type == 'team'">
+            <div class="col-md-2">
+              <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+              <h4 class="text-center capped bold"><a class="blue" href="/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+            </div>
+          </div>
+        </div>
+        <div class="tags row">
+          <div class="col-md-2 capped">
+            <h3 class="division">central</h3>
+          </div>
+          <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.division == 'central' && tag.type == 'team'">
+            <div class="col-md-2">
+              <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+              <h4 class="text-center capped bold"><a class="blue" href="/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+            </div>
+          </div>
+        </div>
+        <div class="tags row">
+          <div class="col-md-2 capped">
+            <h3 class="division">atlantic</h3>
+          </div>
+          <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.division == 'atlantic' && tag.type == 'team'">
+            <div class="col-md-2">
+              <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+              <h4 class="text-center capped bold"><a class="blue" href="/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+            </div>
+          </div>
+        </div>
+        <div class="tags row">
+          <div class="col-md-2 capped">
+            <h3 class="division">southeast</h3>
+          </div>
+          <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.division == 'southeast' && tag.type == 'team'">
+            <div class="col-md-2">
+              <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+              <h4 class="text-center capped bold"><a class="blue" href="/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+       <div class="social">
+        <div class="row">
+          <div class="col-sm-12">
+            <!--<a class="twitter-timeline" href="https://twitter.com/hoopsrevolution">Tweets by hoopsrevolution</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+

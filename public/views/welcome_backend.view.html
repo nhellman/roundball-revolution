@@ -1,0 +1,189 @@
+<div ng-controller="LogoutCtrl">
+  <a ng-click='logout()' class="btn btn-default">Logout</a>
+</div>
+
+<div class="backend-container">
+	<div class="row">
+		<div class="col-xs-12">
+			<h2 class="heading">Welcome to the Backend</h2>
+		</div>
+	</div>
+
+	<div ng-controller="ArticlesCtrl">
+	  <div class="backend-header clearout-top">
+	    <div class="row">
+	      <div class="col-md-6">
+	        <h1><a href="/backend/articles">ARTICLES</a></h1>
+	      </div>
+	      <div class="col-md-6">
+	        <a href="/articles/add" class="btn btn-default btn-info pull-right">Add Article</a>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-sm-12">
+	        <input type="search" class="form-control" ng-model="q" placeholder="Find Articles" aria-label="Find Articles">
+	      </div>
+	    </div>
+	  </div>
+	  <div class="articles">
+	    <div class="row">
+	      <div class="col-sm-3">
+	        <h4>HEADLINE</h4>
+	      </div>
+	      <div class="col-sm-3">
+	        <h4>PHOTO</h4>
+	      </div>
+	      <div class="col-sm-2">
+	        <h4>AUTHOR</h4>
+	      </div>
+	      <div class="col-sm-2">
+	        <h4>DATE</h4>
+	      </div>
+	      <div class="col-sm-2">
+	        <h4>EDIT</h4>
+	      </div>
+	    </div>
+	    <div ng-repeat="article in articles.slice().reverse() | limitTo: 5 | filter: q as results ">
+	      <div class="row spacer-bottom">
+	        <div class="col-sm-3">
+	          <h4><a href="/articles/author/{{author.name}}">{{article.title}}</a></h4>
+	        </div>
+	        <div class="col-sm-3">
+	          <img ng-src={{article.image}}>
+	        </div>
+	        <div class="col-sm-2">
+	          <p>{{article.author}}</p>
+	        </div>
+	        <div class="col-sm-2">
+	          <p><span ng-bind="article.date | date: 'MM/dd/yyyy'"></span></p>
+	        </div>
+	        <div class="col-sm-2">
+	          <a class="btn btn-default" href="/articles/edit/{{article._id}}">Edit Article</a>
+	        </div>
+	      </div>
+	    </div>
+	    <div ng-if="articles == false">
+	      No articles to display
+	    </div>
+	  </div>
+	</div>
+
+	<hr>
+
+	<div ng-controller="AuthorCtrl">
+	  <div class="backend-header">
+	    <div class="row">
+	      <div class="col-md-6">
+	        <h1><a href="/backend/authors">AUTHORS</a></h1>
+	      </div>
+	      <div class="col-md-6">
+	        <a href="/authors/add" class="btn btn-default btn-info pull-right">Add Author</a>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-sm-12">
+	        <input type="search" class="form-control" ng-model="q" placeholder="Find Authors" aria-label="Find Authors">
+	      </div>
+	    </div>
+	  </div>
+	    <div class="authors">
+	      <div class="row">
+	        <div class="col-sm-3">
+	          <h4>NAME</h4>
+	        </div>
+	        <div class="col-sm-4">
+	          <h4>PHOTO</h4>
+	        </div>
+	        <div class="col-sm-3">
+	          <h4>BIO</h4>
+	        </div>
+	        <div class="col-sm-2">
+	          <h4>EDIT</h4>
+	        </div>
+	      </div>
+	      <div ng-repeat="author in authors | limitTo: 10 | filter: q as results">
+	        <div class="row spacer-bottom">
+	          <div class="col-sm-3">
+	            <h4>{{author.name}}</h4>
+	          </div>
+	          <div class="col-sm-4">
+	            <div><img ng-src={{author.image}}></div>
+	          </div>
+	          <div class="col-sm-3">
+	            <p ng-bind-html="author.bio"></p>
+	          </div>
+	          <div class="col-sm-2">
+	            <a href="/authors/edit/{{author._id}}" class="btn btn-default">Edit</a>
+	          </div>
+	        </div>
+	      </div>
+	      <div ng-if="authors == false">
+	        No Authors to display
+	      </div>
+	  </div>
+	</div>
+
+	<hr>
+
+	<div ng-controller="TagCtrl">
+	  <div class="backend-header">
+	    <div class="row">
+	      <div class="col-md-6">
+	        <h1><a href="/backend/tags">TAGS</a></h1>
+	      </div>
+	      <div class="col-md-6">
+	        <a href="/tags/add" class="btn btn-default btn-info pull-right">Add Tag</a>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-sm-12">
+	        <input type="search" class="form-control" ng-model="q" placeholder="Find Tags" aria-label="Find Tags">
+	      </div>
+	    </div>
+	  </div>
+	  <div class="tags">
+	      <div class="row">
+	        <div class="col-sm-3">
+	          <h4>NAME</h4>
+	        </div>
+	        <div class="col-sm-2">
+	          <h4>PHOTO</h4>
+	        </div>
+	        <div class="col-sm-2">
+	          <h4>CONFERENCE</h4>
+	        </div>
+	        <div class="col-sm-2">
+	          <h4>DIVISION</h4>
+	        </div>
+	        <div class="col-sm-3">
+	          <h4>EDIT</h4>
+	        </div>
+	      </div>
+	      </div>
+	    <div ng-repeat="tag in tags | filter: q as results">
+	      <div class="row spacer-bottom">
+	        <div class="col-sm-3">
+	          <h4><a class="capped bold" href="/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+	        </div>
+	        <div class="col-sm-2">
+	        	<img ng-src={{tag.image}}>
+	        </div>
+	        <div class="col-sm-2">
+	        	<p class="capped">{{tag.conference}}</p>
+	        </div>
+	        <div class="col-sm-2">
+	        	<p class="capped">{{tag.division}}</p>
+	        </div>
+	        <div class="col-sm-3">
+	          <a href="/tags/edit/{{tag._id}}" class="btn btn-default">Edit</a>
+	        </div>
+	      </div>
+	    </div>
+	    <div ng-if="tag == false">
+	      No Tag to display
+	    </div>
+	  </div>
+	</div>
+
+
+</div>

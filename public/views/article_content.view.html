@@ -1,0 +1,55 @@
+<div ng-controller="ArticlesSlugCtrl">
+    <div class="row">
+      <div class="main-article" ng-style="{'background-image': 'url('+ article[0].image + ')'}"></div>
+      <span class="glyphicon glyphicon-camera" aria-hidden="true"></span><p class="credit">{{article[0].credit}}</p>
+    </div>
+    <div class="body-container">
+      <div class="row">
+        <div class="col-md-8 center-block">
+          <h1 class="headline sans">{{article[0].title}}</h1>
+          <p class="serif blurb">{{article[0].blurb}}</p>
+          <div class="post-info text-center">
+            <p>
+            <span ng-repeat="author in authors" ng-if="author.name == article[0].author">
+              <a class="author" href="/articles/author/{{article[0].author}}"><img class="img-circle author-pic" ng-src="{{author.image}}" alt=""></a>
+            </span>
+            <a class="author" href="/articles/author/{{article[0].author}}">{{article[0].author}}</a> |
+            <span ng-bind="article[0].date | date: 'fullDate'" ng-bind="article[0].date | date: 'h:mma'"></span></p>
+          </div>
+          <hr>
+          <p class="serif body" ng-bind-html="article[0].body"></p>
+          <div class="tag" ng-repeat="tag in tags" ng-if="article[0].tag[$index].name"><span class="label label-info"><a href="/tags/details/{{article[0].tag[$index].name}}">{{article[0].tag[$index].name}}</a></span></div>
+
+          <div class="more-content card">
+            <h3 class="capped">More {{article[0].category}} Content</h3>
+            <div class="row">
+              <div class="col-md-12 content-list-item" ng-repeat="articleModule in articleModule.slice().reverse() | limitTo: 4" ng-if="article[0]._id != articleModule._id && article[0].category == articleModule.category">
+                <div class="row">
+                  <div class="col-md-5"><img ng-src={{articleModule.image}}></div>
+                  <div class="col-md-7">
+                    <h4><a href="/{{articleModule.type}}/{{articleModule.category}}/{{articleModule.slug}}">{{articleModule.title}}</a></h4>
+                    <p><a class="author" href="/articles/author/{{articleModule.author}}">{{articleModule.author}}</a> |
+                    <span ng-bind="articleModule.date | date: 'fullDate'" ng-bind="articleModule.date | date: 'h:mma'"></span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="comment-box">
+            <h3 class="capped">Comments on <span class="bold">{{article[0].title}}</span>:</h3>
+            <div class="row">
+              <div class="col-md-12">
+                <dir-disqus config="disqusConfig"></dir-disqus>
+
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+</div>

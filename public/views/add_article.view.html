@@ -1,0 +1,66 @@
+<div ng-controller="ArticleCreateCtrl">
+  <div class="backend-container">
+    <h3 class="heading">Add Article</h3>
+    <form ng-submit="addArticle()">
+      <fieldset class="form-group">
+        <label>Headline</label>
+        <input type="text" class="form-control" ng-model="title" name="title" placeholder="Enter Headline">
+      </fieldset>
+      <fieldset class="form-group">
+        <label>Blurb</label>
+        <input type="text" class="form-control" ng-model="blurb" name="blurb" placeholder="Enter blurb">
+      </fieldset>
+      <fieldset class="form-group">
+        <label>Author</label>
+        <select class="form-control" ng-model="author" name="author">
+          <option ng-repeat="author in authors" value="{{author.name}}">{{author.name}}</option>
+        </select>
+      </fieldset>
+      <fieldset class="form-group">
+        <label>Image</label>
+        <input type="text" class="form-control" ng-model="image" name="image" placeholder="Enter Image URL">
+        <img ng-src="{{image}}">
+      </fieldset>
+      <fieldset class="form-group">
+        <label>Credit</label>
+        <input type="text" class="form-control" ng-model="credit" name="credit" placeholder="Enter Credit">
+      </fieldset>
+      <fieldset class="form-group">
+        <label>Category</label>
+        <select class="form-control" ng-model="category" name="category">
+          <option ng-repeat="category in categories" value="{{category.name}}">{{category.name}}</option>
+        </select>
+      </fieldset>
+      <fieldset class="form-group">
+        <label>Type</label>
+        <select class="form-control" ng-model="type" name="type">
+          <option ng-repeat="type in types" value="{{type.name}}">{{type.name}}</option>
+        </select>
+      </fieldset>
+      <fieldset class="form-group">
+        <label>Body</label>
+        <text-angular ng-model="body" name="body" rows="10" placeholder="Enter Article Body"></text-angular>
+      </fieldset>
+      <fieldset class="form-group">
+        <label>Featured</label>
+        <select class="form-control" ng-model="featured" name="featured">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+    </fieldset> 
+      <fieldset class="form-group">
+        <label>Tags</label>
+          <oi-select
+          oi-options="tag.name for tag in tags"
+          ng-model="tag"
+          multiple
+          oi-select-options="{
+              newItem: 'autocomplete'
+          }"
+          ></oi-select>
+      </fieldset>
+      <button type="submit" class="btn btn-default">Submit</button>
+      <a href="#/categories" class="btn btn-danger">Cancel</a>
+    </form>
+  </div>  
+</div>

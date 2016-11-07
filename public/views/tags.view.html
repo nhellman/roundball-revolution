@@ -1,0 +1,95 @@
+
+<div ng-controller="TagCtrl">
+  <div class="backend-container">
+    <h2 class="heading">Tags</h2>
+
+    <h3 class="section-heading capped">Western Conference</h3>
+      
+      <h3 class="bold">NORTHWEST</h3>
+      <div class="tags row">
+        <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.division == 'northwest' && tag.type == 'team'">
+          <div class="col-md-2">
+            <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+            <h4 class="text-center capped bold"><a class="blue" href="/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+          </div>
+        </div>
+      </div>
+
+
+      <h3 class="bold">PACIFIC</h3>
+      <div class="tags row">
+        <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.division == 'pacific' && tag.type == 'team'">
+          <div class="col-md-2">
+            <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+            <h4 class="text-center capped bold"><a class="blue" href="/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="bold">SOUTHWEST</h3>
+      <div class="tags row">
+        <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.division == 'southwest' && tag.type == 'team'">
+          <div class="col-md-2">
+            <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+            <h4 class="text-center capped bold"><a class="blue" href="/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-heading capped">Eastern Conference</h3>
+
+      <h3 class="bold">CENTRAL</h3>
+      <div class="tags row">
+        <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.division == 'central' && tag.type == 'team'">
+          <div class="col-md-2">
+            <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+            <h4 class="text-center capped bold"><a class="blue" href="/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="bold">ATLANTIC</h3>
+      <div class="tags row">
+        <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.division == 'atlantic' && tag.type == 'team'">
+          <div class="col-md-2">
+            <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+            <h4 class="text-center capped bold"><a class="blue" href="/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="bold">SOUTHEAST</h3>
+      <div class="tags row">
+        <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.division == 'southeast' && tag.type == 'team'">
+          <div class="col-md-2">
+            <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+            <h4 class="text-center capped bold"><a class="blue" href="/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-heading capped">Players</h3>
+
+      <div class="tags row">
+        <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player'">
+          <div class="col-md-2">
+            <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+            <h4 class="text-center capped bold"><a class="blue" href="/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-heading capped">Other</h3>
+
+      <div class="tags row">
+        <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.conference == 'none'">
+          <div class="col-md-2">
+            <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+            <h4 class="text-center capped bold"><a class="blue" href="/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+</div>

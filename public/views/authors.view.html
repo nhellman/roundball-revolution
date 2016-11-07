@@ -1,0 +1,21 @@
+<h3 class="heading">Authors</h3>
+<div ng-controller="AuthorCtrl">
+  <a href="#/categories">Go Back</a>
+  <div class="row">
+    <div class="authors">
+      <div ng-repeat="author in authors">
+        <div class="col-md-12">
+          <div class="author">
+            <h4>{{author.name}}</h4>
+            <p ng-bind-html="author.bio"></p>
+            <div><img ng-src={{author.image}}></div>
+            <a class="btn btn-default" href="/articles/author/{{author.name}}">See Author</a>
+          </div>
+        </div>
+      </div>
+      <div ng-if="authors == false">
+        No Authors to display
+      </div>
+    </div>
+  </div>
+</div>

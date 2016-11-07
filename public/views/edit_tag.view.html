@@ -1,0 +1,97 @@
+<div ng-controller="TagEditCtrl">
+  <div class="backend-container">
+    <h3 class="heading">Edit Tag</h3>
+    <form ng-submit="updateTag()">
+      <fieldset class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" ng-model="tag.name" name="name" placeholder="Enter Name">
+      </fieldset>
+      <fieldset class="form-group">
+        <label>Image</label>
+        <input type="text" class="form-control" ng-model="tag.image" name="image" placeholder="Enter Image URL">
+        <img ng-src="{{tag.image}}">
+      </fieldset>
+      <fieldset class="form-group">
+        <label>Type</label>
+        <select class="form-control" ng-model="tag.type" name="type">
+          <option value="team">Team</option>
+          <option value="player">Player</option>
+          <option value="league">League</option>
+          <option value="other">Other</option>
+        </select>
+      </fieldset>
+      <fieldset class="form-group">
+        <label>Team</label>
+        <select class="form-control" ng-model="tag.team" name="team">
+          <option ng-repeat="tag in tags" value="{{tag.name}}" ng-if="tag.type == 'team'">{{tag.name}}</option>
+        </select>
+      </fieldset>
+      <fieldset class="form-group">
+        <label>Position</label>
+        <select class="form-control" ng-model="tag.position" name="position">
+          <option value="point guard">Point Guard</option>
+          <option value="shooting guard">Shooting Guard</option>
+          <option value="small forward">Small Forward</option>
+          <option value="power forward">Power Forward</option>
+          <option value="center">Center</option>
+          <option value="none">None</option>
+        </select>
+      </fieldset>
+      <fieldset class="form-group">
+        <label>League Rank</label>
+        <select class="form-control" ng-model="tag.leagueRank" name="leagueRank">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </fieldset>
+      <fieldset class="form-group">
+        <label>Position Rank</label>
+        <select class="form-control" ng-model="tag.positionRank" name="positionRank">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </fieldset>
+      <fieldset class="form-group">
+        <label>Conference</label>
+        <select class="form-control" ng-model="tag.conference" name="conference">
+          <option value="western">Western</option>
+          <option value="eastern">Eastern</option>
+          <option value="none">None</option>
+        </select>
+      </fieldset>
+      <fieldset class="form-group">
+        <label>Division</label>
+        <select class="form-control" ng-model="tag.division" name="division">
+          <option value="atlantic">Atlantic</option>
+          <option value="central">Central</option>
+          <option value="southeast">Southeast</option>
+          <option value="northwest">Northwest</option>
+          <option value="pacific">Pacific</option>
+          <option value="southwest">Southwest</option>
+          <option value="none">None</option>
+        </select>
+      </fieldset>
+      <button type="submit" class="btn btn-default">Submit</button>
+      <a href="#" class="btn btn-danger" ng-click="removeTag()">Delete</a>
+      <a href="/backend" class="btn btn-warning">Cancel</a>
+    </form>
+  </div>
+</div>

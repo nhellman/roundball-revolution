@@ -1,0 +1,13 @@
+<div ng-controller="ArticlesDetailsCtrl">
+  <a href="#/articles">Go Back</a>
+  <h1>{{article.title}}</h1>
+  <p>{{article.blurb}}</p>
+  <div><img ng-src={{article.image}}></div>
+  <p>{{article.credit}}</p>
+  <p>{{article.author}}</p>
+  <small>Post on: <span ng-bind="article.date | date: 'MM/dd/yyyy'"></span></small>
+  <hr>
+  <p ng-bind-html="article.body"></p>
+  <div ng-repeat="tag in tags"><a href="#/tags/details/{{article.tag[0].name[$index]._id}}">{{article.tag[$index].name}}</a></div>
+  <br><br>
+</div>

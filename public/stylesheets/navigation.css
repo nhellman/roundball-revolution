@@ -1,0 +1,180 @@
+header {
+  width: 5%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  transition: .32s ease-out;
+  z-index: 201;
+  background: rgba(44, 62, 80, 0.85);
+}
+
+.nav-lower {
+  background: #2c3e50;
+}
+
+header a,
+.navBtn { color: #fff; }
+
+.toggle {
+  width: 312px;
+  background: #18bc9c;
+}
+
+.reveal {
+  opacity: 1;
+  left: 0;
+}
+
+nav {
+  padding-left: 360px;
+  overflow: hidden;
+  position: absolute;
+  transition: .3s ease-out;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  height: 100%;
+  z-index: 100;
+}
+
+.toggle nav a {
+  color: #2c3e50;
+}
+
+nav a {
+  float: left;
+  padding: 8px 0;
+  opacity: .7;
+  width: 100%;
+  transition: .3s ease;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.6em;
+}
+
+nav a:hover,
+.current,
+.toggle .navBtn { opacity: 1; }
+
+.toggle nav {
+  padding-left: 60px;
+  opacity: 1;
+}
+
+nav .site-info {
+  color: #fff;
+  opacity: .7;
+  position: absolute;
+  bottom: 100px;
+}
+
+.navBtn {
+  font-size: 2em;
+  font-weight: 700;
+  margin: 30px 0 0;
+  width: 100%;
+  text-align: center;
+  line-height: 1em;
+  -webkit-transform: rotate(0deg);
+  transition: .3s ease-out;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1000001;
+  opacity: .5;
+  left: 0;
+}
+
+.toggle .navBtn {
+  -webkit-transform: rotate(224deg);
+  color: #fff;
+  left: -100px;
+}
+
+.navBtn:hover { opacity: 1; }
+
+.main-container {
+  width: 100%;
+  padding: 0;
+  transition: .6s ease-in;
+  overflow: hidden;
+  z-index: 2;
+}
+
+article { padding: 40px 10%; }
+
+.push {
+  margin-left: 240px;
+  margin-right: -240px;
+  transition: .3s ease-in;
+}
+
+.overlay {
+  width: 100%;
+  background: #384047;
+  opacity: .85;
+  z-index: 1;
+  height: 100%;
+  position: fixed;
+  display: none;
+  z-index: 200;
+}
+
+#triangle-topright {
+	width: 0;
+	height: 0;
+	border-top: 250px solid rgba(44, 62, 80, 0.85);
+	border-left: 250px solid transparent;
+}
+
+.logo-overlay {
+  z-index: 200;
+  position: absolute;
+  right: 0px;
+  transition: .5s ease-out;
+}
+
+.logo-overlay img {
+  width: 85%;
+  padding: 55px 0;
+  position: absolute;
+  top: 0;
+}
+
+.block { display: block; }
+
+/* 1024 */
+@media only screen and (max-width: 1024px) {
+
+.container {
+  width: 100%;
+  margin: 0;
+}
+
+header { width: 8%; }
+
+}
+
+/* 768 */
+@media only screen and (max-width: 768px) {
+
+header { width: 10%; }
+
+}
+
+/* 480 */
+@media only screen and (max-width: 480px) {
+
+header { width: 10%; }
+
+
+h3 { font-size: 2em; }
+
+/* 320 */
+@media only screen and (max-width: 320px) {
+ header {
+ width: 15%;
+}
+}

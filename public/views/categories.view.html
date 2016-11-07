@@ -1,0 +1,41 @@
+<div class="backend-container">
+  <h3 class="heading">Categories</h3>
+  <div ng-controller="CategoriesCtrl">
+    <div class="row">
+      <div class="categories">
+        <div ng-repeat="category in categories">
+          <div class="col-md-4">
+            <h3 class="capped">{{category.name}}</h3>
+            <p>{{category.description}}</p>
+            <a href="/articles/category/{{category.name}}">View Articles</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h3>Latest Articles</h3>
+  <div ng-controller="ArticlesCtrl">
+    <div class="row">
+      <div class="articles">
+        <div ng-repeat="article in articles.slice().reverse()">
+          <div class="col-md-12">
+            <div class="content-list-item">
+              <div class="col-md-5"><img ng-src={{article.image}}></div>
+                <div class="col-md-7">
+                  <h4><a href="/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h4>
+                  <p>{{article.blurb}}</p>
+                  <p><a class="author" href="/articles/author/{{article.author}}">{{article.author}}</a> | 
+                  <span ng-bind="article.date | date: 'fullDate'" ng-bind="article.date | date: 'h:mma'"></span></p>
+                  <hr>
+                  <div ng-bind-html="article.body | limitTo: 200"></div>
+                </div>           
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
