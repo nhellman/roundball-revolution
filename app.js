@@ -12,8 +12,7 @@ var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
 var db = mongoose.connection;
 
-mongoURI = 'mongodb://localhost/knowledge';
-mongoose.connect(process.env.MONGOLAB_URI || mongoURI);
+mongoose.connect('mongodb://heroku_gvffrvsx:h3nci6gv759n3p1br6unjkqu4k@ds145997.mlab.com:45997/heroku_gvffrvsx');
 
 var User = require('./models/user.js');
 
