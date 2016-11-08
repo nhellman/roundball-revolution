@@ -2,6 +2,7 @@
   "name": "knowledge",
   "version": "0.0.1",
   "private": true,
+  "engines": { "node": "5.4.0"},
   "scripts": {
     "start": "node ./bin/www"
   },
