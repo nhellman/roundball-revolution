@@ -12,6 +12,8 @@ var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
 var db = mongoose.connection;
 
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/knowledge');
+
 var User = require('./models/user.js');
 
 var routes = require('./routes/index');
@@ -86,22 +88,6 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
-app.use(session({
-    secret: 'secret_key',
-    cookie: {maxAge: 1209600000},
-
-    // store: new MongoStore({
-    //   'db': 'meetupplanner'
-    // }),
-
-    store: new MongoStore({
-      url: process.env.MONGOLAB_URI
-    }),
-
-    resave: true,
-    saveUninitialized: true
-  }));
 
 
 module.exports = app;
