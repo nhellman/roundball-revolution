@@ -1,7 +1,7 @@
 <div ng-controller="HomeCtrl">
   <div class="row featured">
     <div ng-repeat="article in articles.slice().reverse() | limitTo: 1">
-      <div class="col-md-12 main" ng-class="backgroundLeft : hoverLeft">
+      <div class="col-md-12 main" ng-style="{'background-image': 'url('+ article[0].image + ')'}">
         <div class="article">
           <div class="overlay-content text-center" ng-class="{'color-category-nba': article.category == 'nba', 'color-category-basketball': article.category == 'basketball', 'color-category-sports': article.category == 'sports', 'color-category-ncaa': article.category == 'ncaa', 'color-category-data': article.category == 'data'}">
             <h5 class="category-marker capped"><a href="/articles/category/{{article.category}}">{{article.category}}</a></h5>
