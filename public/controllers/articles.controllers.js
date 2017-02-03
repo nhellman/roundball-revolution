@@ -164,17 +164,6 @@ angular.module('kB')
   }
 
   $scope.disqusConfig = {
-    $http.get('/tags').success(function(data) {
-      $scope.tags = data;
-    });
-
-    $http.get('/authors').success(function(data) {
-      $scope.authors = data;
-    });
-
-    $http.get('/articles').success(function(data) {
-      $scope.articleModule = data;
-    });
 
     disqus_shortname: 'roundballrevolution',
     disqus_identifier: '{{ article[0]._id }}',
