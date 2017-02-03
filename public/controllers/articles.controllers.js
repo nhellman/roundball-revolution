@@ -164,9 +164,26 @@ angular.module('kB')
   }
 
   $scope.disqusConfig = {
+    $http.get('/tags').success(function(data) {
+      $scope.tags = data;
+    });
+
+    $http.get('/authors').success(function(data) {
+      $scope.authors = data;
+    });
+
+    $http.get('/articles').success(function(data) {
+      $scope.articleModule = data;
+    });
+
+    function ArticlesSlugCtrl($scope) {
+      //Load product or use resolve in routing
+      $scope.page.setTitle('$scope.article[0].title');
+    }
+
     disqus_shortname: 'roundballrevolution',
-    disqus_identifier: '{{article[0]._id}}',
-    disqus_url: 'http://www.roundballrevolution.com/{{article.type}}/{{article.category}}/{{article.slug}}'
+    disqus_identifier: '{{ article[0]._id }}',
+    disqus_url: 'http://www.roundballrevolution.com/{{ article.type }}/{{ article.category }}/{{ article.slug }}'
   };
 
 }])
