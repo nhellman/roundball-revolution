@@ -166,7 +166,7 @@ angular.module('kB')
   $scope.disqusConfig = {
     disqus_shortname: 'roundballrevolution',
     disqus_identifier: '{{article[0]._id}}',
-    disqus_url: 'http://localhost:3000/{{article.type}}/{{article.category}}/{{article.slug}}'
+    disqus_url: 'http://www.roundballrevolution.com/{{article.type}}/{{article.category}}/{{article.slug}}'
   };
 
 }])
