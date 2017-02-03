@@ -1,9 +1,17 @@
 var express = require('express');
 var router = express.Router();
+var path = require('path');
 var passport = require('passport');
 
 var User = require('../models/user.js');
 
+// serve angular front end files from root path
+router.use('/', express.static('app', { redirect: false }));
+
+// rewrite virtual urls to angular app to enable refreshing of internal pages
+router.get('*', function (req, res, next) {
+    res.sendFile(path.resolve('app/index.html'));
+});
 
 router.post('/register', function(req, res) {
   User.register(new User({ username: req.body.username }),
