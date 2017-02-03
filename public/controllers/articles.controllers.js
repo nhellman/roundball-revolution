@@ -176,11 +176,6 @@ angular.module('kB')
       $scope.articleModule = data;
     });
 
-    function ArticlesSlugCtrl($scope) {
-      //Load product or use resolve in routing
-      $scope.page.setTitle('$scope.article[0].title');
-    }
-
     disqus_shortname: 'roundballrevolution',
     disqus_identifier: '{{ article[0]._id }}',
     disqus_url: 'http://www.roundballrevolution.com/{{ article.type }}/{{ article.category }}/{{ article.slug }}'
