@@ -50,7 +50,6 @@ passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-app.use('/', routes);
 app.use('/articles', articles);
 app.use('/authors', authors);
 app.use('/tags', tags);
