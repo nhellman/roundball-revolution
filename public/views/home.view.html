@@ -23,7 +23,7 @@
 				<div class="col-md-12">
 					<ul id="gtco-post-list">
 						<li class="full entry animate-box" data-animate-effect="fadeIn" ng-repeat="article in articles.slice(0, articles.length - 1).reverse() | limitTo: 1">
-							<a href="single.html">
+							<a href="/{{article.type}}/{{article.category}}/{{article.slug}}">
 								<div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
 								<div class="entry-desc">
 									<h3>{{article.title}}</h3>
@@ -34,7 +34,7 @@
 						</li>
 
             <li class="two-third entry animate-box" data-animate-effect="fadeIn" ng-repeat="article in articles.slice(0, articles.length - 2).reverse() | limitTo: 1">
-							<a href="single.html">
+							<a href="/{{article.type}}/{{article.category}}/{{article.slug}}">
 								<div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
 								<div class="entry-desc">
 									<h3>{{article.title}}</h3>
@@ -45,7 +45,7 @@
 						</li>
 
             <li class="one-third entry animate-box" data-animate-effect="fadeIn" ng-repeat="article in articles.slice(0, articles.length - 3).reverse() | limitTo: 1">
-              <a href="single.html">
+              <a href="/{{article.type}}/{{article.category}}/{{article.slug}}">
                 <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
                 <div class="entry-desc">
                   <h3>{{article.title}}</h3>
@@ -56,7 +56,7 @@
             </li>
 
             <li class="one-third entry animate-box" data-animate-effect="fadeIn" ng-repeat="article in articles.slice(0, articles.length - 4).reverse() | limitTo: 3">
-              <a href="single.html">
+              <a href="/{{article.type}}/{{article.category}}/{{article.slug}}">
                 <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
                 <div class="entry-desc">
                   <h3>{{article.title}}</h3>
@@ -67,7 +67,7 @@
             </li>
 
             <li class="one-half entry animate-box" data-animate-effect="fadeIn" ng-repeat="article in articles.slice(0, articles.length - 7).reverse() | limitTo: 2">
-              <a href="single.html">
+              <a href="/{{article.type}}/{{article.category}}/{{article.slug}}">
                 <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
                 <div class="entry-desc">
                   <h3>{{article.title}}</h3>
@@ -79,7 +79,7 @@
 
 
             <li class="one-third entry animate-box" data-animate-effect="fadeIn" ng-repeat="article in articles.slice(0, articles.length - 9).reverse() | limitTo: 1">
-              <a href="single.html">
+              <a href="/{{article.type}}/{{article.category}}/{{article.slug}}">
                 <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
                 <div class="entry-desc">
                   <h3>{{article.title}}</h3>
@@ -90,7 +90,7 @@
             </li>
 
             <li class="two-third entry animate-box" data-animate-effect="fadeIn" ng-repeat="article in articles.slice(0, articles.length - 10).reverse() | limitTo: 1">
-              <a href="single.html">
+              <a href="/{{article.type}}/{{article.category}}/{{article.slug}}">
                 <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
                 <div class="entry-desc">
                   <h3>{{article.title}}</h3>
