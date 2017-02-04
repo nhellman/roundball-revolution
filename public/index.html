@@ -13,11 +13,11 @@
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="stylesheets/bootstrap.css">
 
-    <!-- Custom styles for this template -->
-    <link href="stylesheets/style.css" rel="stylesheet">
+    <!-- Custom styles for this template
+    <link href="stylesheets/style.css" rel="stylesheet">-->
 
-    <!-- navigation -->
-    <link href="stylesheets/navigation.css" rel="stylesheet">
+    <!-- navigation
+    <link href="stylesheets/navigation.css" rel="stylesheet">-->
 
     <!-- textAngular styles -->
     <link rel='stylesheet' href='/bower_components/textAngular/dist/textAngular.css'>
@@ -35,63 +35,75 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700|PT+Serif:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Glegoo:400,700|Open+Sans:400,700" rel="stylesheet">
 
+    <!-- VERB -->
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i|Roboto+Mono" rel="stylesheet">
+
+  	<!-- Icomoon Icon Fonts-->
+  	<link rel="stylesheet" href="stylesheets/icomoon.css">
+
+  	<!-- Theme style  -->
+  	<link rel="stylesheet" href="stylesheets/style-verb.css">
+
+  	<!-- Modernizr JS -->
+  	<script src="javascript/modernizr-2.6.2.min.js"></script>
 
   </head>
 
   <body>
 
-    <div class="main-container">
+  <div class="gtco-loader"></div>
 
-      <div class="overlay"></div>
-        <header class="">
-          <div class="navBtn">+</div>
-          <nav>
-            <a href="/">Home</a>
-            <a href="/articles/type/posts">Posts</a>
-            <a href="/articles/type/newsflash">Newsflash</a>
-            <a href="/articles/type/breakdown">Breakdown</a>
-            <a href="/articles/type/analysis">Analysis</a>
-            <a href="/articles/type/feature">Features</a>
-            <a href="/articles/category/nba">NBA</a>
-            <a href="/articles/category/basketball">Basketball</a>
-            <a href="#">Contact</a>
-            <div class="site-info">
-              <h3 class="capped">Roundball Revolution</h3>
-              <p>&copy; 2016  | Created by <a href="www.natehellman.com">Nate Hellman</a></p>
-              <p><a href="/backend">Backend</a></p>
-            </div>
-
-          </nav>
-        </header>
-
-        <div class="logo-overlay">
-          <div id="triangle-topright"></div>
-          <a href="/"><img src="images/RoundballLogo-New.svg" alt="" /></a>
+  <div id="page">
+  <nav class="gtco-nav" role="navigation">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-4 text-left">
+          <div id="gtco-logo"><a href="index.html">Roundball Revolution<span>.</span></a></div>
         </div>
+        <div class="col-xs-8 text-right menu-1">
+          <ul>
+            <li class="has-dropdown">
+              <a href="category.html">Categories</a>
+              <ul class="dropdown">
+                <li><a href="#">NBA</a></li>
+                <li><a href="#">Basketball</a></li>
+                <li><a href="#">NCAA</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Data</a></li>
+              </ul>
+            </li>
 
-      <div class="container container-content">
-
-        <div class="ng-view"></div>
-
-        <div class="footer crack-top">
-          <div class="row">
-              <div class="col-xs-12">
-                <div class="col-md-6">
-                  <a href="/"><img class="threequartersize" src="images/RoundballLogo-Small-Blue.svg" alt="" /></a>
-                </div>
-                  <div class="col-md-6">
-                    <a href="https://www.facebook.com/roundballrevolution"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
-                    <a href="https://twitter.com/hoopsrevolution"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
-                    <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
-                    <a href="mailto:roundballrevolution@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
-                  </div>
-              </div>
-          </div>
+            <li><a href="category.html">Posts</a></li>
+            <li><a href="category.html">Newsflash</a></li>
+            <li><a href="category.html">Features</a></li>
+            <li><a href="category.html">Analysis</a></li>
+          </ul>
         </div>
+      </div>
+    </div>
+  </nav>
 
-      </div><!-- /.container -->
-
-    </div> <!--main-->
+  <footer id="gtco-footer" role="contentinfo">
+    <div class="container">
+      <div class="row copyright">
+        <div class="col-md-12 text-center">
+          <p>
+            <small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>
+            <small class="block">Designed by <a href="http://gettemplates.co/" target="_blank">GetTemplates.co</a> Demo Images: <a href="http://unsplash.com/" target="_blank">Unsplash</a></small>
+          </p>
+          <p>
+            <ul class="gtco-social-icons">
+              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="#"><i class="icon-facebook"></i></a></li>
+              <li><a href="#"><i class="icon-linkedin"></i></a></li>
+              <li><a href="#"><i class="icon-dribbble"></i></a></li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
 
     <!-- Angular/Bootstrap/Third-Party -->
     <script src="bower_components/angular/angular.min.js"></script>
@@ -112,6 +124,14 @@
     <script src="app.js"></script>
     <script src="javascript/roundball.js"></script>
     <script src="javascript/twitter.js"></script>
+    <!-- jQuery Easing -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- Stellar -->
+    <script src="js/jquery.stellar.min.js"></script>
+    <!-- Main -->
+    <script src="js/main.js"></script>
     <!--Services-->
     <script src="services/services.js"></script>
     <!--Controllers-->

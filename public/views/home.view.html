@@ -1,22 +1,112 @@
 <div ng-controller="HomeCtrl">
-  <div class="row featured">
-    <div ng-repeat="article in articles.slice().reverse() | limitTo: 1">
-      <div class="col-md-12 main" ng-style="{'background-image': 'linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('+ article.image + ')'}">
-        <div class="article">
-          <div class="overlay-content text-center" ng-class="{'color-category-nba': article.category == 'nba', 'color-category-basketball': article.category == 'basketball', 'color-category-sports': article.category == 'sports', 'color-category-ncaa': article.category == 'ncaa', 'color-category-data': article.category == 'data'}">
-            <h5 class="category-marker capped"><a href="/articles/category/{{article.category}}">{{article.category}}</a></h5>
-            <h1 class="capped"><a data-disqus-identifier="article._id" href="/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h1>
-            <a data-disqus-identifier="{{article._id}}" href="/{{article.type}}/{{article.category}}/{{article.slug}}#disqus_thread"></a>
-            <div class="storyinfo">
-              <p><a href="/articles/author/{{article.author}}"><em>{{article.author}}</em></a></p>
-              <p><i class="fa fa-clock-o"></i> <time am-time-ago="article.date"></time></p>
+  <div ng-repeat="article in articles.slice().reverse() | limitTo: 1">
+    <header id="gtco-header" class="gtco-cover" role="banner" ng-style="{'background-image': 'linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('+ article.image + ')'}" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 text-left">
+            <div class="display-t">
+              <div class="display-tc animate-box" data-animate-effect="fadeInUp">
+                <span class="date-post"><time am-time-ago="article.date"></time></span>
+                <h1 class="mb30"><a href="/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h1>
+                <p><a href="/{{article.type}}/{{article.category}}/{{article.slug}}" class="text-link">Read More</a></p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </header>
   </div>
-  <div class="home-container latest">
+  <div id="gtco-main">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-12">
+					<ul id="gtco-post-list">
+						<li class="full entry animate-box" data-animate-effect="fadeIn" ng-repeat="article in articles.slice(0, articles.length - 1).reverse() | limitTo: 1">
+							<a href="single.html">
+								<div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
+								<div class="entry-desc">
+									<h3>{{article.title}}</h3>
+									<p>{{article.deck}}</p>
+								</div>
+							</a>
+							<a href="#" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+						</li>
+
+            <li class="two-third entry animate-box" data-animate-effect="fadeIn" ng-repeat="article in articles.slice(0, articles.length - 2).reverse() | limitTo: 1">
+							<a href="single.html">
+								<div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
+								<div class="entry-desc">
+									<h3>{{article.title}}</h3>
+									<p>{{article.deck}}</p>
+								</div>
+							</a>
+							<a href="#" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+						</li>
+
+            <li class="one-third entry animate-box" data-animate-effect="fadeIn" ng-repeat="article in articles.slice(0, articles.length - 3).reverse() | limitTo: 1">
+              <a href="single.html">
+                <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
+                <div class="entry-desc">
+                  <h3>{{article.title}}</h3>
+                  <p>{{article.deck}}</p>
+                </div>
+              </a>
+              <a href="#" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+            </li>
+
+            <li class="one-third entry animate-box" data-animate-effect="fadeIn" ng-repeat="article in articles.slice(0, articles.length - 4).reverse() | limitTo: 3">
+              <a href="single.html">
+                <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
+                <div class="entry-desc">
+                  <h3>{{article.title}}</h3>
+                  <p>{{article.deck}}</p>
+                </div>
+              </a>
+              <a href="#" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+            </li>
+
+            <li class="one-half entry animate-box" data-animate-effect="fadeIn" ng-repeat="article in articles.slice(0, articles.length - 7).reverse() | limitTo: 2">
+              <a href="single.html">
+                <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
+                <div class="entry-desc">
+                  <h3>{{article.title}}</h3>
+                  <p>{{article.deck}}</p>
+                </div>
+              </a>
+              <a href="#" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+            </li>
+
+
+            <li class="one-third entry animate-box" data-animate-effect="fadeIn" ng-repeat="article in articles.slice(0, articles.length - 9).reverse() | limitTo: 1">
+              <a href="single.html">
+                <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
+                <div class="entry-desc">
+                  <h3>{{article.title}}</h3>
+                  <p>{{article.deck}}</p>
+                </div>
+              </a>
+              <a href="#" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+            </li>
+
+            <li class="two-third entry animate-box" data-animate-effect="fadeIn" ng-repeat="article in articles.slice(0, articles.length - 10).reverse() | limitTo: 1">
+              <a href="single.html">
+                <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
+                <div class="entry-desc">
+                  <h3>{{article.title}}</h3>
+                  <p>{{article.deck}}</p>
+                </div>
+              </a>
+              <a href="#" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+            </li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+  <!--<div class="home-container latest">
     <div class="secondary">
     <h2 class="capped bold">the latest</h2>
       <div class="article">
@@ -243,5 +333,5 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
 </div>
