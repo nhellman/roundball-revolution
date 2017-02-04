@@ -1,4 +1,4 @@
-var app = angular.module('kB', ['ngRoute', 'textAngular', 'oi.select', 'ngResource', 'angularUtils.directives.dirDisqus', 'ngAnimate', 'angularMoment']);
+var app = angular.module('kB', ['ngRoute', 'textAngular', 'oi.select', 'ngResource', 'angularUtils.directives.dirDisqus', 'ngAnimate', 'angularMoment', 'zumba.angular-waypoints']);
 
 //FILTERS
 
