@@ -7,7 +7,7 @@
 }
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *
 * ======================================================= */
 body {
@@ -531,6 +531,13 @@ article .gtco-highlight h4 {
   font-family: "Roboto Mono", serif;
 }
 article .gtco-highlight p {
+  font-family: "Crimson Text", Arial, sans-serif;
+  font-style: italic;
+  color: #000;
+  font-size: 20px;
+}
+
+article .gtco-blurb p {
   font-family: "Crimson Text", Arial, sans-serif;
   font-style: italic;
   color: #000;

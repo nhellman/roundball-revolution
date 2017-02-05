@@ -8,8 +8,8 @@
             <div class="display-t">
               <div class="display-tc" data-animate-effect="fadeInUp">
                 <span class="date-post"><time am-time-ago="article.date"></time></span>
-                <h1 class="mb30"><a href="/#/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h1>
-                <p><a href="/{{article.type}}/{{article.category}}/{{article.slug}}" class="text-link">Read More</a></p>
+                <h1 class="mb30"><a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h1>
+                <p><a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="text-link">Read More</a></p>
               </div>
             </div>
           </div>
@@ -23,87 +23,87 @@
 				<div class="col-md-12">
 					<ul id="gtco-post-list">
 						<li class="full entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 1).reverse() | limitTo: 1">
-							<a href="/{{article.type}}/{{article.category}}/{{article.slug}}">
+							<a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
 								<div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
 								<div class="entry-desc">
 									<h3>{{article.title}}</h3>
 									<p>{{article.blurb}}</p>
-                  <p><a href="/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
+                  <p><a href="#/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
 								</div>
 							</a>
-							<a href="/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+							<a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
 						</li>
 
             <li class="two-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 2).reverse() | limitTo: 1">
-							<a href="/{{article.type}}/{{article.category}}/{{article.slug}}">
+							<a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
 								<div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
 								<div class="entry-desc">
 									<h3>{{article.title}}</h3>
 									<p>{{article.blurb}}</p>
-                  <p><a href="/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
+                  <p><a href="#/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
 								</div>
 							</a>
-							<a href="/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+							<a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
 						</li>
 
             <li class="one-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 3).reverse() | limitTo: 1">
-              <a href="/{{article.type}}/{{article.category}}/{{article.slug}}">
+              <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
                 <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
                 <div class="entry-desc">
                   <h3>{{article.title}}</h3>
                   <p>{{article.blurb}}</p>
-                  <p><a href="/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
+                  <p><a href="#/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
                 </div>
               </a>
-              <a href="/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+              <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
             </li>
 
             <li class="one-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 4).reverse() | limitTo: 3">
-              <a href="/{{article.type}}/{{article.category}}/{{article.slug}}">
+              <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
                 <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
                 <div class="entry-desc">
                   <h3>{{article.title}}</h3>
                   <p>{{article.blurb}}</p>
-                  <p><a href="/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
+                  <p><a href="#/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
                 </div>
               </a>
-              <a href="/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+              <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
             </li>
 
             <li class="one-half entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 7).reverse() | limitTo: 2">
-              <a href="/{{article.type}}/{{article.category}}/{{article.slug}}">
+              <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
                 <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
                 <div class="entry-desc">
                   <h3>{{article.title}}</h3>
                   <p>{{article.blurb}}</p>
-                  <p><a href="/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
+                  <p><a href="#/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
                 </div>
               </a>
-              <a href="/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+              <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
             </li>
 
 
             <li class="one-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 9).reverse() | limitTo: 1">
-              <a href="/{{article.type}}/{{article.category}}/{{article.slug}}">
+              <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
                 <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
                 <div class="entry-desc">
                   <h3>{{article.title}}</h3>
                   <p>{{article.blurb}}</p>
-                  <p><a href="/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
+                  <p><a href="#/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
                 </div>
               </a>
-              <a href="/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+              <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
             </li>
 
             <li class="two-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 10).reverse() | limitTo: 1">
-              <a href="/{{article.type}}/{{article.category}}/{{article.slug}}">
+              <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
                 <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
                 <div class="entry-desc">
                   <h3>{{article.title}}</h3>
                   <p>{{article.blurb}}</p>
                 </div>
               </a>
-              <a href="/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+              <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
             </li>
 
 					</ul>
@@ -122,23 +122,23 @@
               <div class="crop-height-secondary flip">
                 <div class="overlay-card" ng-class="{'color-hawks': article.tag[0].name == 'Atlanta Hawks', 'color-celtics': article.tag[0].name == 'Boston Celtics', 'color-nets': article.tag[0].name == 'Brooklyn Nets', 'color-hornets': article.tag[0].name == 'Charlotte Hornets', 'color-bulls': article.tag[0].name == 'Chicago Bulls', 'color-cavs': article.tag[0].name == 'Cleveland Cavaliers', 'color-mavs': article.tag[0].name == 'Dallas Mavericks', 'color-nuggets': article.tag[0].name == 'Denver Nuggets', 'color-pistons': article.tag[0].name == 'Detroit Pistons', 'color-warriors': article.tag[0].name == 'Golden State Warriors', 'color-rockets': article.tag[0].name == 'Houston Rockets', 'color-pacers': article.tag[0].name == 'Indiana Pacers', 'color-clips': article.tag[0].name == 'Los Angeles Clippers', 'color-lakers': article.tag[0].name == 'Los Angeles Lakers', 'color-grizzlies': article.tag[0].name == 'Memphis Grizzlies', 'color-heat': article.tag[0].name == 'Miami Heat', 'color-bucks': article.tag[0].name == 'Milwaukee Bucks', 'color-twolves': article.tag[0].name == 'Minnesota Timberwolves', 'color-pelicans': article.tag[0].name == 'New Orleans Pelicans', 'color-knicks': article.tag[0].name == 'New York Knicks', 'color-thunder': article.tag[0].name == 'Oklahoma City Thunder', 'color-magic': article.tag[0].name == 'Orlando Magic', 'color-sixers': article.tag[0].name == 'Philadelphia 76ers', 'color-suns': article.tag[0].name == 'Phoenix Suns', 'color-blazers': article.tag[0].name == 'Portland Trail Blazers', 'color-kings': article.tag[0].name == 'Sacramento Kings', 'color-spurs': article.tag[0].name == 'San Antonio Spurs', 'color-raptors': article.tag[0].name == 'Toronto Raptors', 'color-jazz': article.tag[0].name == 'Utah Jazz', 'color-wizards': article.tag[0].name == 'Washington Wizards'}">
                   <h5 class="category-marker-small category-marker capped">
-                  <a href="/tags/details/{{article.tag[0].name}}" class="ng-binding">{{article.tag[0].name}}</a>
+                  <a href="#/tags/details/{{article.tag[0].name}}" class="ng-binding">{{article.tag[0].name}}</a>
                   </h5>
                 </div>
-                <a class="transition-animation" ng-href="/{{article.type}}/{{article.category}}/{{article.slug}}"><img class="scale flip" ng-src={{article.image}}></a>
+                <a class="transition-animation" ng-href="#/{{article.type}}/{{article.category}}/{{article.slug}}"><img class="scale flip" ng-src={{article.image}}></a>
               </div>
                 <div class="content">
-                  <h3><a href="/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h3>
+                  <h3><a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h3>
                   <p class="storyinfo">
                     <span class="date"><i class="fa fa-clock-o"></i> <time am-time-ago="article.date"></time></span> |
-                    <span class="category capped"><a href="/articles/category/{{article.category}}">{{article.category}}</a> | <a href="/articles/type/{{article.type}}">{{article.type}}</a></span>
+                    <span class="category capped"><a href="#/articles/category/{{article.category}}">{{article.category}}</a> | <a href="#/articles/type/{{article.type}}">{{article.type}}</a></span>
                   </p>
                   <div class="row">
                     <div class="col-md-7">
                        <span ng-repeat="author in authors" ng-if="author.name == article.author">
-                        <a class="author" href="/articles/author/{{article.author}}"><img class="img-circle author-pic" ng-src="{{author.image}}" alt=""></a>
+                        <a class="author" href="#/articles/author/{{article.author}}"><img class="img-circle author-pic" ng-src="{{author.image}}" alt=""></a>
                       </span>
-                      <a class="author blue" href="/articles/author/{{article.author}}">{{article.author}}</a>
+                      <a class="author blue" href="#/articles/author/{{article.author}}">{{article.author}}</a>
                     </div>
                     <div class="col-md-5 comment-count">
                       <a href="#">1 Comment</a>
@@ -154,23 +154,23 @@
                 <div class="crop-height-secondary flip">
                   <div class="overlay-card" ng-class="{'color-hawks': article.tag[0].name == 'Atlanta Hawks', 'color-celtics': article.tag[0].name == 'Boston Celtics', 'color-nets': article.tag[0].name == 'Brooklyn Nets', 'color-hornets': article.tag[0].name == 'Charlotte Hornets', 'color-bulls': article.tag[0].name == 'Chicago Bulls', 'color-cavs': article.tag[0].name == 'Cleveland Cavaliers', 'color-mavs': article.tag[0].name == 'Dallas Mavericks', 'color-nuggets': article.tag[0].name == 'Denver Nuggets', 'color-pistons': article.tag[0].name == 'Detroit Pistons', 'color-warriors': article.tag[0].name == 'Golden State Warriors', 'color-rockets': article.tag[0].name == 'Houston Rockets', 'color-pacers': article.tag[0].name == 'Indiana Pacers', 'color-clips': article.tag[0].name == 'Los Angeles Clippers', 'color-lakers': article.tag[0].name == 'Los Angeles Lakers', 'color-grizzlies': article.tag[0].name == 'Memphis Grizzlies', 'color-heat': article.tag[0].name == 'Miami Heat', 'color-bucks': article.tag[0].name == 'Milwaukee Bucks', 'color-twolves': article.tag[0].name == 'Minnesota Timberwolves', 'color-pelicans': article.tag[0].name == 'New Orleans Pelicans', 'color-knicks': article.tag[0].name == 'New York Knicks', 'color-thunder': article.tag[0].name == 'Oklahoma City Thunder', 'color-magic': article.tag[0].name == 'Orlando Magic', 'color-sixers': article.tag[0].name == 'Philadelphia 76ers', 'color-suns': article.tag[0].name == 'Phoenix Suns', 'color-blazers': article.tag[0].name == 'Portland Trail Blazers', 'color-kings': article.tag[0].name == 'Sacramento Kings', 'color-spurs': article.tag[0].name == 'San Antonio Spurs', 'color-raptors': article.tag[0].name == 'Toronto Raptors', 'color-jazz': article.tag[0].name == 'Utah Jazz', 'color-wizards': article.tag[0].name == 'Washington Wizards'}">
                     <h5 class="category-marker-small category-marker capped">
-                    <a href="/tags/details/{{article.tag[0].name}}" class="ng-binding">{{article.tag[0].name}}</a>
+                    <a href="#/tags/details/{{article.tag[0].name}}" class="ng-binding">{{article.tag[0].name}}</a>
                     </h5>
                   </div>
-                  <a ng-href="/{{article.type}}/{{article.category}}/{{article.slug}}"><img class="scale flip" ng-src={{article.image}}></a>
+                  <a ng-href="#/{{article.type}}/{{article.category}}/{{article.slug}}"><img class="scale flip" ng-src={{article.image}}></a>
                 </div>
                 <div class="content">
-                  <h3><a href="/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h3>
+                  <h3><a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h3>
                   <p class="storyinfo">
                     <span class="date"><i class="fa fa-clock-o"></i> <time am-time-ago="article.date"></time></span> |
-                    <span class="category capped"><a href="/articles/category/{{article.category}}">{{article.category}}</a> | <a href="/articles/type/{{article.type}}">{{article.type}}</a></span>
+                    <span class="category capped"><a href="#/articles/category/{{article.category}}">{{article.category}}</a> | <a href="#/articles/type/{{article.type}}">{{article.type}}</a></span>
                   </p>
                   <div class="row">
                     <div class="col-md-7">
                        <span ng-repeat="author in authors" ng-if="author.name == article.author">
-                        <a class="author" href="/articles/author/{{article.author}}"><img class="img-circle author-pic" ng-src="{{author.image}}" alt=""></a>
+                        <a class="author" href="#/articles/author/{{article.author}}"><img class="img-circle author-pic" ng-src="{{author.image}}" alt=""></a>
                       </span>
-                      <a class="author blue" href="/articles/author/{{article.author}}">{{article.author}}</a>
+                      <a class="author blue" href="#/articles/author/{{article.author}}">{{article.author}}</a>
                     </div>
                     <div class="col-md-5 comment-count">
                       <a href="#">1 Comment</a>
@@ -186,23 +186,23 @@
                 <div class="crop-height-secondary flip">
                   <div class="overlay-card" ng-class="{'color-hawks': article.tag[0].name == 'Atlanta Hawks', 'color-celtics': article.tag[0].name == 'Boston Celtics', 'color-nets': article.tag[0].name == 'Brooklyn Nets', 'color-hornets': article.tag[0].name == 'Charlotte Hornets', 'color-bulls': article.tag[0].name == 'Chicago Bulls', 'color-cavs': article.tag[0].name == 'Cleveland Cavaliers', 'color-mavs': article.tag[0].name == 'Dallas Mavericks', 'color-nuggets': article.tag[0].name == 'Denver Nuggets', 'color-pistons': article.tag[0].name == 'Detroit Pistons', 'color-warriors': article.tag[0].name == 'Golden State Warriors', 'color-rockets': article.tag[0].name == 'Houston Rockets', 'color-pacers': article.tag[0].name == 'Indiana Pacers', 'color-clips': article.tag[0].name == 'Los Angeles Clippers', 'color-lakers': article.tag[0].name == 'Los Angeles Lakers', 'color-grizzlies': article.tag[0].name == 'Memphis Grizzlies', 'color-heat': article.tag[0].name == 'Miami Heat', 'color-bucks': article.tag[0].name == 'Milwaukee Bucks', 'color-twolves': article.tag[0].name == 'Minnesota Timberwolves', 'color-pelicans': article.tag[0].name == 'New Orleans Pelicans', 'color-knicks': article.tag[0].name == 'New York Knicks', 'color-thunder': article.tag[0].name == 'Oklahoma City Thunder', 'color-magic': article.tag[0].name == 'Orlando Magic', 'color-sixers': article.tag[0].name == 'Philadelphia 76ers', 'color-suns': article.tag[0].name == 'Phoenix Suns', 'color-blazers': article.tag[0].name == 'Portland Trail Blazers', 'color-kings': article.tag[0].name == 'Sacramento Kings', 'color-spurs': article.tag[0].name == 'San Antonio Spurs', 'color-raptors': article.tag[0].name == 'Toronto Raptors', 'color-jazz': article.tag[0].name == 'Utah Jazz', 'color-wizards': article.tag[0].name == 'Washington Wizards'}">
                     <h5 class="category-marker-small category-marker capped">
-                    <a href="/tags/details/{{article.tag[0].name}}" class="ng-binding">{{article.tag[0].name}}</a>
+                    <a href="#/tags/details/{{article.tag[0].name}}" class="ng-binding">{{article.tag[0].name}}</a>
                     </h5>
                   </div>
-                  <a ng-href="/{{article.type}}/{{article.category}}/{{article.slug}}"><img class="scale flip" ng-src={{article.image}}></a>
+                  <a ng-href="#/{{article.type}}/{{article.category}}/{{article.slug}}"><img class="scale flip" ng-src={{article.image}}></a>
                 </div>
                 <div class="content">
-                  <h3><a href="/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h3>
+                  <h3><a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h3>
                   <p class="storyinfo">
                     <span class="date"><i class="fa fa-clock-o"></i> <time am-time-ago="article.date"></time></span>  |
-                    <span class="category capped"><a href="/articles/category/{{article.category}}">{{article.category}}</a> | <a href="/articles/type/{{article.type}}">{{article.type}}</a></span>
+                    <span class="category capped"><a href="#/articles/category/{{article.category}}">{{article.category}}</a> | <a href="#/articles/type/{{article.type}}">{{article.type}}</a></span>
                   </p>
                   <div class="row">
                     <div class="col-md-7">
                        <span ng-repeat="author in authors" ng-if="author.name == article.author">
-                        <a class="author" href="/articles/author/{{article.author}}"><img class="img-circle author-pic" ng-src="{{author.image}}" alt=""></a>
+                        <a class="author" href="#/articles/author/{{article.author}}"><img class="img-circle author-pic" ng-src="{{author.image}}" alt=""></a>
                       </span>
-                      <a class="author blue" href="/articles/author/{{article.author}}">{{article.author}}</a>
+                      <a class="author blue" href="#/articles/author/{{article.author}}">{{article.author}}</a>
                     </div>
                     <div class="col-md-5 comment-count">
                       <a href="#">1 Comment</a>
@@ -220,11 +220,11 @@
       <div class="col-md-12 main" ng-style="{'background-image': 'url('+ article.image + ')'}">
         <div class="article">
           <div class="overlay-content text-center" ng-class="{'color-category-nba': article.category == 'nba', 'color-category-basketball': article.category == 'basketball', 'color-category-sports': article.category == 'sports', 'color-category-ncaa': article.category == 'ncaa', 'color-category-data': article.category == 'data'}">
-            <h5 class="category-marker capped"><a href="/articles/category/{{article.category}}">{{article.category}}</a></h5>
-            <h1 class="capped"><a data-disqus-identifier="article._id" href="/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h1>
-            <a data-disqus-identifier="{{article._id}}" href="/{{article.type}}/{{article.category}}/{{article.slug}}#disqus_thread"></a>
+            <h5 class="category-marker capped"><a href="#/articles/category/{{article.category}}">{{article.category}}</a></h5>
+            <h1 class="capped"><a data-disqus-identifier="article._id" href="#/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h1>
+            <a data-disqus-identifier="{{article._id}}" href="#/{{article.type}}/{{article.category}}/{{article.slug}}#disqus_thread"></a>
             <div class="storyinfo">
-              <p><a href="/articles/author/{{article.author}}"><em>{{article.author}}</em></a></p>
+              <p><a href="#/articles/author/{{article.author}}"><em>{{article.author}}</em></a></p>
               <p><i class="fa fa-clock-o"></i> <time am-time-ago="article.date"></time></p>
             </div>
           </div>
@@ -241,12 +241,12 @@
               <div ng-repeat="article in articles.slice(0, articles.length - 12).reverse() | limitTo: 1" ng-if="article.type == 'feature' || article.type == 'analysis' || article.type == 'breakdown' || article.type == 'newsflash' || article.type == 'podcast' || article.type == 'infographic' && article.featured == 'yes'">
                 <div class="article">
                   <div class="card">
-                    <div class="crop-height-callout flip"><a href="/{{article.type}}/{{article.category}}/{{article.slug}}"><img class="scale flip" ng-src={{article.image}}></a></div>
+                    <div class="crop-height-callout flip"><a href="#/{{article.type}}/{{article.category}}/{{article.slug}}"><img class="scale flip" ng-src={{article.image}}></a></div>
                     <div class="content text-center center-block" ng-class="{'color-category-nba': article.category == 'nba', 'color-category-basketball': article.category == 'basketball', 'color-category-sports': article.category == 'sports', 'color-category-ncaa': article.category == 'ncaa', 'color-category-data': article.category == 'data'}">
-                      <h5 class="category-marker capped"><a href="/articles/category/{{article.category}}">{{article.category}}</a></h5>
-                      <h2 class="capped"><a href="/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h2>
+                      <h5 class="category-marker capped"><a href="#/articles/category/{{article.category}}">{{article.category}}</a></h5>
+                      <h2 class="capped"><a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h2>
                       <div class="storyinfo">
-                        <p><a href="/articles/author/{{article.author}}"><em>{{article.author}}</em></a> | <i class="fa fa-clock-o"></i> <time am-time-ago="article.date"></time></p>
+                        <p><a href="#/articles/author/{{article.author}}"><em>{{article.author}}</em></a> | <i class="fa fa-clock-o"></i> <time am-time-ago="article.date"></time></p>
                       </div>
                     </div>
                   </div>
@@ -257,12 +257,12 @@
               <div ng-repeat="article in articles.slice(0, articles.length - 13).reverse() | limitTo: 1" ng-if="article.type == 'feature' || article.type == 'analysis' || article.type == 'breakdown' || article.type == 'newsflash' || article.type == 'podcast' || article.type == 'infographic' && article.featured == 'yes'">
                 <div class="article">
                   <div class="card">
-                    <div class="crop-height-callout flip"><a href="/{{article.type}}/{{article.category}}/{{article.slug}}"><img class="scale flip" ng-src={{article.image}}></a></div>
+                    <div class="crop-height-callout flip"><a href="#/{{article.type}}/{{article.category}}/{{article.slug}}"><img class="scale flip" ng-src={{article.image}}></a></div>
                     <div class="content text-center center-block" ng-class="{'color-category-nba': article.category[0].name == 'NBA', 'color-category-basketball': article.category == 'Basketball', 'color-category-sports': article.category == 'Sports', 'color-category-ncaa': article.category == 'NCAA', 'color-category-data': article.category == 'Data'}">
-                      <h5 class="category-marker capped"><a href="/articles/category/{{article.category}}">{{article.category}}</a></h5>
-                      <h2 class="capped"><a href="/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h2>
+                      <h5 class="category-marker capped"><a href="#/articles/category/{{article.category}}">{{article.category}}</a></h5>
+                      <h2 class="capped"><a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">{{article.title}}</a></h2>
                       <div class="storyinfo">
-                        <p><a href="/articles/author/{{article.author}}"><em>{{article.author}}</em></a> | <i class="fa fa-clock-o"></i> <time am-time-ago="article.date"></time></p>
+                        <p><a href="#/articles/author/{{article.author}}"><em>{{article.author}}</em></a> | <i class="fa fa-clock-o"></i> <time am-time-ago="article.date"></time></p>
                       </div>
                     </div>
                   </div>
@@ -286,8 +286,8 @@
             <div class="spacer-bottom sliver-top">
               <div class="col-sm-3">
                 <h4 class="player-rank-number">{{tag.leagueRank}}</h4>
-                <a href="/tags/details/{{tag.name}}" class="ng-binding"><img class="team-logo img-responsive" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
-                <h4 class="capped center"><a href="/tags/details/{{tag.name}}" class="ng-binding">{{tag.name}}</a></h4>
+                <a href="#/tags/details/{{tag.name}}" class="ng-binding"><img class="team-logo img-responsive" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+                <h4 class="capped center"><a href="#/tags/details/{{tag.name}}" class="ng-binding">{{tag.name}}</a></h4>
               </div>
             </div>
           </div>
@@ -298,8 +298,8 @@
             <div class="spacer-bottom sliver-top">
               <div class="col-sm-3">
                 <h4 class="player-rank-number">{{tag.leagueRank}}</h4>
-                <a href="/tags/details/{{tag.name}}" class="ng-binding"><img class="team-logo img-responsive" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
-                <h4 class="capped center"><a href="/tags/details/{{tag.name}}" class="ng-binding">{{tag.name}}</a></h4>
+                <a href="#/tags/details/{{tag.name}}" class="ng-binding"><img class="team-logo img-responsive" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+                <h4 class="capped center"><a href="#/tags/details/{{tag.name}}" class="ng-binding">{{tag.name}}</a></h4>
               </div>
             </div>
           </div>
@@ -315,10 +315,10 @@
             <div ng-repeat="tag in tags | filter: q as results" ng-if="tag.type == 'team'">
       	      <div class="row spacer-bottom sliver-top">
       	        <div class="col-sm-9">
-      	          <h2 class="capped"><a href="/tags/details/{{tag.name}}" class="ng-binding">{{tag.name}}</a></h2>
+      	          <h2 class="capped"><a href="#/tags/details/{{tag.name}}" class="ng-binding">{{tag.name}}</a></h2>
       	        </div>
       	        <div class="col-sm-3 pull-right">
-      	          <a href="/tags/details/{{tag.name}}" class="ng-binding"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+      	          <a href="#/tags/details/{{tag.name}}" class="ng-binding"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
       	        </div>
       	      </div>
       	    </div>
@@ -329,10 +329,10 @@
             <div ng-repeat="tag in tags | filter: r as results" ng-if="tag.type == 'player'">
       	      <div class="row spacer-bottom sliver-top">
       	        <div class="col-sm-9">
-      	          <h2 class="capped"><a href="/tags/details/{{tag.name}}" class="ng-binding">{{tag.name}}</a></h2>
+      	          <h2 class="capped"><a href="#/tags/details/{{tag.name}}" class="ng-binding">{{tag.name}}</a></h2>
       	        </div>
       	        <div class="col-sm-3 pull-right">
-      	          <a href="/tags/details/{{tag.name}}" class="ng-binding"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+      	          <a href="#/tags/details/{{tag.name}}" class="ng-binding"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
       	        </div>
       	      </div>
       	    </div>

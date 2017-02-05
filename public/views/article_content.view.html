@@ -8,7 +8,7 @@
             <div class="display-tc " zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%">
               <span class="date-post"><time am-time-ago="article[0].date"></time></span>
               <h1 class="mb30">{{article[0].title}}</h1>
-              <p>by <a href="/articles/author/{{article[0].author}}" class="text-link">{{article[0].author}}</a></p>
+              <p>by <a href="#/articles/author/{{article[0].author}}" class="text-link">{{article[0].author}}</a></p>
             </div>
           </div>
         </div>
@@ -24,7 +24,7 @@
             <div class="text-left content-article">
               <div class="row">
                 <div class="col-lg-8 cp-r " zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%">
-                  <div class="gtco-highlight">
+                  <div class="gtco-blurb">
                     <p>{{article[0].blurb}}</p>
                   </div>
                   <p ng-bind-html="article[0].body"></p>
@@ -50,14 +50,14 @@
           <ul id="gtco-post-list">
             <div zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="articleModule in articleModule.slice().reverse() | limitTo: 3" ng-if="article[0]._id != articleModule._id && article[0].category == articleModule.category">
               <li class="entry" ng-class="articleModule.length == 3 ? 'one-third' : 'full-width'">
-                <a href="/{{articleModule.type}}/{{articleModule.category}}/{{articleModule.slug}}">
+                <a href="#/{{articleModule.type}}/{{articleModule.category}}/{{articleModule.slug}}">
                   <div class="entry-img" ng-style="{'background-image': 'url('+ articleModule.image + ')'}"></div>
                   <div class="entry-desc">
                     <h3>{{articleModule.title}}</h3>
                     <p>{{articleModule.blurb}}</p>
                   </div>
                 </a>
-                <a href="/articles/category/{{articleModule.category}}" class="post-meta">{{articleModule.category}}  <span class="date-posted"><span class="date-posted"><time am-time-ago="articleModule.date"></time></span></a>
+                <a href="#/articles/category/{{articleModule.category}}" class="post-meta">{{articleModule.category}}  <span class="date-posted"><span class="date-posted"><time am-time-ago="articleModule.date"></time></span></a>
               </li>
             </div>
           </ul>
