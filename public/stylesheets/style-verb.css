@@ -678,7 +678,7 @@ figure figcaption {
   }
 }
 .entry.full .entry-img {
-  display: table-cell;
+  /*display: table-cell;*/
   vertical-align: top;
   background-size: cover;
   background-repeat: no-repeat;

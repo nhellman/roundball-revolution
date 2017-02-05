@@ -163,13 +163,6 @@ angular.module('kB')
     $scope.page.setTitle('$scope.article[0].title');
   }
 
-  $scope.disqusConfig = {
-
-    disqus_shortname: 'roundballrevolution',
-    disqus_identifier: '{{ article[0]._id }}',
-    disqus_url: 'http://www.roundballrevolution.com/{{ article.type }}/{{ article.category }}/{{ article.slug }}'
-  };
-
 }])
 
 .controller('ArticlesTypeCtrl', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
