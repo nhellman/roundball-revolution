@@ -28,9 +28,10 @@
 								<div class="entry-desc">
 									<h3>{{article.title}}</h3>
 									<p>{{article.blurb}}</p>
+                  <p><a href="/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
 								</div>
 							</a>
-							<a href="#" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+							<a href="/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
 						</li>
 
             <li class="two-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 2).reverse() | limitTo: 1">
@@ -39,9 +40,10 @@
 								<div class="entry-desc">
 									<h3>{{article.title}}</h3>
 									<p>{{article.blurb}}</p>
+                  <p><a href="/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
 								</div>
 							</a>
-							<a href="#" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+							<a href="/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
 						</li>
 
             <li class="one-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 3).reverse() | limitTo: 1">
@@ -50,9 +52,10 @@
                 <div class="entry-desc">
                   <h3>{{article.title}}</h3>
                   <p>{{article.blurb}}</p>
+                  <p><a href="/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
                 </div>
               </a>
-              <a href="#" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+              <a href="/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
             </li>
 
             <li class="one-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 4).reverse() | limitTo: 3">
@@ -61,9 +64,10 @@
                 <div class="entry-desc">
                   <h3>{{article.title}}</h3>
                   <p>{{article.blurb}}</p>
+                  <p><a href="/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
                 </div>
               </a>
-              <a href="#" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+              <a href="/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
             </li>
 
             <li class="one-half entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 7).reverse() | limitTo: 2">
@@ -72,9 +76,10 @@
                 <div class="entry-desc">
                   <h3>{{article.title}}</h3>
                   <p>{{article.blurb}}</p>
+                  <p><a href="/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
                 </div>
               </a>
-              <a href="#" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+              <a href="/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
             </li>
 
 
@@ -84,9 +89,10 @@
                 <div class="entry-desc">
                   <h3>{{article.title}}</h3>
                   <p>{{article.blurb}}</p>
+                  <p><a href="/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
                 </div>
               </a>
-              <a href="#" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+              <a href="/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
             </li>
 
             <li class="two-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 10).reverse() | limitTo: 1">
@@ -97,7 +103,7 @@
                   <p>{{article.blurb}}</p>
                 </div>
               </a>
-              <a href="#" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+              <a href="/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
             </li>
 
 					</ul>
