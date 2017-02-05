@@ -125,7 +125,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
         access: {restricted: false}
     }).
     otherwise({redirectTo: '/'});
-    $locationProvider.html5Mode(true);
+    //$locationProvider.html5Mode(true);
 }]);
 
 app.run(function ($rootScope, $location, $route, AuthService) {
