@@ -6,7 +6,7 @@
         <div class="col-md-7 text-left">
           <div class="display-t">
             <div class="display-tc " zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%">
-              <span class="date-post"><time am-time-ago="article.date"></time>/span>
+              <span class="date-post"><time am-time-ago="article.date"></time></span>
               <h1 class="mb30">{{article[0].title}}</h1>
               <p>by <a href="/articles/author/{{article[0].author}}" class="text-link">{{article[0].author}}</a></p>
             </div>
@@ -45,7 +45,7 @@
       <div class="row row-pb-md">
         <div class="col-md-12">
           <ul id="gtco-post-list">
-            <li class="one-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="articleModule in articleModule.slice().reverse() | limitTo: 3" ng-if="article[0]._id != articleModule._id && article[0].category == articleModule.category">
+            <li class="entry" ng-class="'full-width': articleModule.length == 1, 'one-half': articleModule.length == 2, 'one-third': articleModule.length == 3" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="articleModule in articleModule.slice().reverse() | limitTo: 3" ng-if="article[0]._id != articleModule._id && article[0].category == articleModule.category">
               <a href="#">
                 <div class="entry-img" ng-style="{'background-image': 'url('+ articleModule.image + ')'}"></div>
                 <div class="entry-desc">
@@ -60,21 +60,4 @@
       </div>
     </div>
   </div>
-
-          <hr>
-
-          <div class="comment-box">
-            <h3 class="capped">Comments on <span class="bold">{{article[0].title}}</span>:</h3>
-            <div class="row">
-              <div class="col-md-12">
-                <dir-disqus config="disqusConfig"></dir-disqus>
-
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-      </div>
-    </div>
 </div>
