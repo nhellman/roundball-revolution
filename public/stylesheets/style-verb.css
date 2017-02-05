@@ -669,7 +669,7 @@ figure figcaption {
   line-height: 1.9;
 }
 .entry.full {
-  display: table;
+  display: table !important;
   width: 100%;
 }
 @media screen and (max-width: 768px) {
