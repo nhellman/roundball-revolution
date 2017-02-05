@@ -48,18 +48,16 @@
       <div class="row row-pb-md">
         <div class="col-md-12">
           <ul id="gtco-post-list">
-            <div zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="articleModule in articleModule.slice().reverse() | limitTo: 3" ng-if="article[0]._id != articleModule._id">
-              <li class="entry one-third">
-                <a href="#/{{articleModule.type}}/{{articleModule.category}}/{{articleModule.slug}}">
-                  <div class="entry-img" ng-style="{'background-image': 'url('+ articleModule.image + ')'}"></div>
-                  <div class="entry-desc">
-                    <h3>{{articleModule.title}}</h3>
-                    <p>{{articleModule.blurb}}</p>
-                  </div>
-                </a>
-                <a href="#/articles/category/{{articleModule.category}}" class="post-meta">{{articleModule.category}}  <span class="date-posted"><span class="date-posted"><time am-time-ago="articleModule.date"></time></span></a>
-              </li>
-            </div>
+            <li class="entry one-third" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="articleModule in articleModule.slice().reverse() | limitTo: 3" ng-if="article[0]._id != articleModule._id">
+              <a href="#/{{articleModule.type}}/{{articleModule.category}}/{{articleModule.slug}}">
+                <div class="entry-img" ng-style="{'background-image': 'url('+ articleModule.image + ')'}"></div>
+                <div class="entry-desc">
+                  <h3>{{articleModule.title}}</h3>
+                  <p>{{articleModule.blurb}}</p>
+                </div>
+              </a>
+              <a href="#/articles/category/{{articleModule.category}}" class="post-meta">{{articleModule.category}}  <span class="date-posted"><span class="date-posted"><time am-time-ago="articleModule.date"></time></span></a>
+            </li>
           </ul>
         </div>
       </div>
