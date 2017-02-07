@@ -2138,4 +2138,17 @@ figure figcaption {
   border-bottom-left-radius: 0px !important;
 }
 
+.tag {
+  float: left;
+  margin-right: 10px;
+}
+
+.tag .label {
+  background: #F73859;
+}
+
+.tag .label a {
+  color: #fff;
+}
+
 /*# sourceMappingURL=style.css.map */
