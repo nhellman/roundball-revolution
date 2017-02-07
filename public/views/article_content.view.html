@@ -29,7 +29,7 @@
                   </div>
                   <p ng-bind-html="article[0].body"></p>
                   <div class="tag" ng-repeat="tag in tags" ng-if="article[0].tag[$index].name">
-                    <span class="label"><a href="/tags/details/{{article[0].tag[$index].name}}">{{article[0].tag[$index].name}}</a></span>
+                    <span class="label"><a href="#/tags/details/{{article[0].tag[$index].name}}">{{article[0].tag[$index].name}}</a></span>
                   </div>
                 </div>
                 <div class="col-lg-4 ">
