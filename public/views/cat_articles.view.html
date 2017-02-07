@@ -21,7 +21,7 @@
 			<div class="row row-pb-md">
 				<div class="col-md-12">
 					<ul id="gtco-post-list">
-            <li class="one-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in cat_articles.slice().reverse() | limitTo: 1">
+            <li class="one-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in cat_articles.slice().reverse()">
 							<a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
 								<div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
 								<div class="entry-desc">
@@ -30,7 +30,7 @@
                   <p><a href="#/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
 								</div>
 							</a>
-							<a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
+							<a href="#/articles/category/{{category.name}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
 						</li>
 					</ul>
 				</div>
