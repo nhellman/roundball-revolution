@@ -13,7 +13,7 @@ router.get('*', function (req, res, next) {
     res.sendFile(path.resolve('app/index.html'));
 });
 
-/*router.post('/register', function(req, res) {
+router.post('/register', function(req, res) {
   User.register(new User({ username: req.body.username }),
     req.body.password, function(err, account) {
     if (err) {
@@ -69,5 +69,5 @@ router.get('/status', function(req, res) {
     status: true
   });
 });
-*/
+
 module.exports = router;
