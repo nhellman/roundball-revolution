@@ -2155,4 +2155,9 @@ figure figcaption {
    color: rgba(255, 255, 255, 0.5);
  }
 
+.tag-img {
+  position: absolute;
+  bottom: 0px;
+}
+
 /*# sourceMappingURL=style.css.map */
