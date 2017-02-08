@@ -114,7 +114,7 @@ h1, h2, h3, h4, h5, h6, figure {
 @media screen and (max-width: 768px) {
   .gtco-nav #gtco-logo {
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: 21px;
   }
 }
 .gtco-nav #gtco-logo a > span {
@@ -361,22 +361,12 @@ h1, h2, h3, h4, h5, h6, figure {
 .gtco-cover.gtco-cover-xsm {
   height: 400px;
 }
-@media screen and (max-width: 768px) {
-  .gtco-cover.gtco-cover-xsm {
-    height: 300px;
-  }
-}
+
 .gtco-cover.gtco-cover-xsm .display-t,
 .gtco-cover.gtco-cover-xsm .display-tc {
   height: 400px;
   display: table;
   width: 100%;
-}
-@media screen and (max-width: 768px) {
-  .gtco-cover.gtco-cover-xsm .display-t,
-  .gtco-cover.gtco-cover-xsm .display-tc {
-    height: 300px;
-  }
 }
 
 .gtco-staff {
