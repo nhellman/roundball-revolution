@@ -2163,4 +2163,12 @@ figure figcaption {
   margin-bottom: 10px;
 }
 
+.narrow-image {
+  width: 60%;
+}
+
+.full-image {
+  width: 100%;
+}
+
 /*# sourceMappingURL=style.css.map */
