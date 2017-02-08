@@ -21,7 +21,7 @@
 			<div class="row row-pb-md">
 				<div class="col-md-12">
 					<ul id="gtco-post-list">
-            <li class="one-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in cat_articles.slice().reverse()">
+            <li class="one-third entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in cat_articles.reverse()">
 							<a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
 								<div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
 								<div class="entry-desc">
