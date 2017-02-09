@@ -82,8 +82,8 @@
                   </div>
                 </div>
               </li>
-            </div>
-
+            </li>
+            
             <li class="one-half entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 7).reverse() | limitTo: 2">
               <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
                 <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
