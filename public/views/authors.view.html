@@ -1,21 +1,38 @@
-<h3 class="heading">Authors</h3>
+<header id="gtco-header" class="gtco-cover gtco-cover-xsm" role="banner" style="background-image:url(images/img_1.jpg);" data-stellar-background-ratio="0.5">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7 text-left">
+				<div class="display-t">
+					<div class="display-tc">
+						<span class="date-post"></span>
+						<h1 class="mb30">Authors</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
 <div ng-controller="AuthorCtrl">
-  <a href="#/categories">Go Back</a>
-  <div class="row">
-    <div class="authors">
-      <div ng-repeat="author in authors">
-        <div class="col-md-12">
-          <div class="author">
-            <h4>{{author.name}}</h4>
-            <p ng-bind-html="author.bio"></p>
-            <div><img ng-src={{author.image}}></div>
-            <a class="btn btn-default" href="/articles/author/{{author.name}}">See Author</a>
-          </div>
-        </div>
-      </div>
-      <div ng-if="authors == false">
-        No Authors to display
-      </div>
-    </div>
-  </div>
+  <div id="gtco-main">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-12">
+					<ul id="gtco-post-list">
+						<li class="full entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="author in authors">
+							<a href="#/articles/author/{{author.name}}">
+                <div class="entry-img" ng-style="{'background-image': 'url('+ author.image + ')'}"></div>
+								<div class="entry-desc">
+									<h3>{{author.name}}</h3>
+									<p ng-bind-html="author.bio"></p>
+								</div>
+							</a>
+							<a href="#/articles/author/{{author.name}}" class="post-meta">More About {{author.name}}</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
