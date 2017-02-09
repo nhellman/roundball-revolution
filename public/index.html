@@ -76,7 +76,21 @@
             <li><a href="/#/articles/type/post">Posts</a></li>
             <li><a href="/#/articles/type/newflash">Newsflash</a></li>
             <li><a href="/#/articles/type/feature">Features</a></li>
-            <li visible-lg><a href="/#/articles/type/analysis">Analysis</a></li>
+            <div ng-controller="HomeCtrl">
+            <li visible-lg>
+              <input type="search" class="form-control" ng-model="r" placeholder="Find Player" aria-label="Find Player">
+              <li ng-repeat="tag in tags | filter: r as results" ng-if="tag.type == 'player'">
+        	      <div class="mt10 mb20">
+        	        <div class="col-sm-9">
+        	          <h2 class="capped"><a href="/tags/details/{{tag.name}}" class="ng-binding">{{tag.name}}</a></h2>
+        	        </div>
+        	        <div class="col-sm-3 pull-right">
+        	          <a href="/tags/details/{{tag.name}}" class="ng-binding"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        	        </div>
+        	      </div>
+        	    </li>
+            </li>
+            </div>
           </ul>
         </div>
       </div>
