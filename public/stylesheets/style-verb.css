@@ -2157,6 +2157,7 @@ figure figcaption {
 .tag-img {
   position: absolute;
   bottom: 0px;
+  width: 90%;
 }
 
 .ranking-info p {
