@@ -584,7 +584,7 @@ figure figcaption {
     margin-left: 0% !important;
   }
 }
-#gtco-post-list li {
+#gtco-post-list li, #gtco-post-list div.search-section {
   display: block;
   padding: 0;
   margin: 0 0 20px 2%;
