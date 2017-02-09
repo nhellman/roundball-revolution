@@ -70,20 +70,20 @@
               <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
             </li>
 
-            <li class="search-section entry full">
+            <div class="search-section entry full">
               <input type="search" class="form-control" ng-model="query" placeholder="Find Player" aria-label="Find Player">
               <li ng-repeat="tag in tags | filter: query | limitTo: 1" ng-if="tag.type == 'player'">
                 <div class="mt10 mb20">
                   <div class="col-sm-9">
-                    <p><a href="#/tags/details/{{tag.name}}" class="ng-binding">{{tag.name}}</a></p>
+                    <h3><a href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h3>
                   </div>
                   <div class="col-sm-3 pull-right">
-                    <a href="#/tags/details/{{tag.name}}" class="ng-binding"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+                    <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
                   </div>
                 </div>
               </li>
-            </li>
-            
+            </div>
+
             <li class="one-half entry" zum-waypoint="waypoints" down="name.down" up="name.up" offset="20%" ng-repeat="article in articles.slice(0, articles.length - 7).reverse() | limitTo: 2">
               <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
                 <div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
