@@ -71,8 +71,8 @@
             </li>
 
             <li class="search-section entry full">
-              <input type="search" class="form-control" ng-model="r" placeholder="Find Player" aria-label="Find Player">
-              <li ng-repeat="tag in tags | filter: r as results | limitTo: 1" ng-if="tag.type == 'player'">
+              <input type="search" class="form-control" ng-model="query" placeholder="Find Player" aria-label="Find Player">
+              <li ng-repeat="tag in tags | filter: query | limitTo: 1" ng-if="tag.type == 'player'">
                 <div class="mt10 mb20">
                   <div class="col-sm-9">
                     <p><a href="#/tags/details/{{tag.name}}" class="ng-binding">{{tag.name}}</a></p>
