@@ -70,9 +70,9 @@
               <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
             </li>
 
-            <div class="search-section">
+            <li class="search-section entry full">
               <input type="search" class="form-control" ng-model="r" placeholder="Find Player" aria-label="Find Player">
-              <li ng-repeat="tag in tags | filter: r as results" ng-if="tag.type == 'player'">
+              <li ng-repeat="tag in tags | filter: r as results | limitTo: 1" ng-if="tag.type == 'player'">
                 <div class="mt10 mb20">
                   <div class="col-sm-9">
                     <p><a href="#/tags/details/{{tag.name}}" class="ng-binding">{{tag.name}}</a></p>
