@@ -22,7 +22,7 @@
 				<div class="col-md-12">
 					<ul id="gtco-post-list">
             <div class="search-section">
-              <h2>Search Teams</h2>
+              <h2>Search Players</h2>
               <input type="search" class="form-control" ng-model="query" placeholder="Find Player" aria-label="Find Player">
               <li class="entry full" ng-repeat="tag in tags | filter: query | limitTo: 1" ng-if="tag.type == 'player'">
                 <div class="mt10 mb20">
@@ -35,6 +35,10 @@
                 </div>
               </li>
             </div>
+					</ul>
+				</div>
+        <div class="col-md-12">
+					<ul id="gtco-post-list">
             <div class="search-section">
               <h2>Search Teams</h2>
               <input type="search" class="form-control" ng-model="query" placeholder="Find Team" aria-label="Find Team">
