@@ -23,8 +23,8 @@
 					<ul>
             <div class="search-section">
               <h2>Search Players</h2>
-              <input type="search" class="form-control" ng-model="query" placeholder="Find Player" aria-label="Find Player">
-              <li class="entry full" ng-repeat="tag in tags | filter: query | limitTo: 1" ng-if="tag.type == 'player'">
+              <input type="search" class="form-control" ng-model="playerquery" placeholder="Find Player" aria-label="Find Player">
+              <li class="entry full" ng-repeat="tag in tags | filter: playerquery | limitTo: 1" ng-if="tag.type == 'player'">
                 <div>
                   <div class="col-sm-5 ranking-info">
                     <h3 class="mt10 mb20"><a href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h3>
@@ -42,11 +42,11 @@
 					</ul>
 				</div>
         <div class="col-md-12">
-					<ul id="gtco-post-list">
+					<ul>
             <div class="search-section">
               <h2>Search Teams</h2>
-              <input type="search" class="form-control" ng-model="query" placeholder="Find Team" aria-label="Find Team">
-              <li class="entry full" ng-repeat="tag in tags | filter: query | limitTo: 1" ng-if="tag.type == 'team'">
+              <input type="search" class="form-control" ng-model="teamquery" placeholder="Find Team" aria-label="Find Team">
+              <li class="entry full" ng-repeat="tag in tags | filter: teamquery | limitTo: 1" ng-if="tag.type == 'team'">
                 <div class="mt10 mb20">
                   <div class="col-sm-5 ranking-info">
                     <h3><a href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h3>

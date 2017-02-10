@@ -2178,9 +2178,10 @@ figure figcaption {
   margin-bottom: 100px;
 }
 
-.search-section input[type=search] {
+/*.search-section input[type=search] {
   width: 96%;
-}
+}*/
+
 .search-section .entry {
   background: #fff;
 }
