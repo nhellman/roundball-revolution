@@ -20,18 +20,18 @@
 		<div class="container">
 			<div class="row row-pb-md">
 				<div class="col-md-12">
-					<ul id="gtco-post-list">
+					<ul>
             <div class="search-section">
               <h2>Search Players</h2>
               <input type="search" class="form-control" ng-model="query" placeholder="Find Player" aria-label="Find Player">
               <li class="entry full" ng-repeat="tag in tags | filter: query | limitTo: 1" ng-if="tag.type == 'player'">
                 <div>
-                  <div class="col-sm-5">
+                  <div class="col-sm-5 ranking-info">
                     <h3 class="mt10 mb20"><a href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h3>
-                    <span class="date-post">{{tag.team}}</span>
-                    <span class="date-post">{{tag.position}}</span>
-                    <p ng-if="tag[0].type == 'player' && tag[0].leagueRank > 0"><span class="tag-info">#{{tag[0].leagueRank}}</span> player in the NBA</p>
-                    <p ng-if="tag[0].type == 'player' && tag[0].positionRank > 0"><span class="tag-info">#{{tag[0].positionRank}}</span> {{tag[0].position}} in the NBA</p>
+                    <p class="date-post">{{tag.team}}</p>
+                    <p class="date-post">{{tag.position}}</p>
+                    <p ng-if="tag.type == 'player' && tag[0].leagueRank > 0"><span class="tag-info">#{{tag[0].leagueRank}}</span> player in the NBA</p>
+                    <p ng-if="tag.type == 'player' && tag[0].positionRank > 0"><span class="tag-info">#{{tag[0].positionRank}}</span> {{tag[0].position}} in the NBA</p>
                   </div>
                   <div class="col-sm-7">
                     <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
@@ -48,12 +48,12 @@
               <input type="search" class="form-control" ng-model="query" placeholder="Find Team" aria-label="Find Team">
               <li class="entry full" ng-repeat="tag in tags | filter: query | limitTo: 1" ng-if="tag.type == 'team'">
                 <div class="mt10 mb20">
-                  <div class="col-sm-9">
+                  <div class="col-sm-5 ranking-info">
                     <h3><a href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h3>
-                    <p ng-if="tag[0].type == 'team' && tag[0].leagueRank > 0"><span class="tag-info">#{{tag[0].leagueRank}}</span> team in the NBA</p>
-                    <p ng-if="tag[0].type == 'team' && tag[0].positionRank > 0"><span class="tag-info">#{{tag[0].positionRank}}</span> team in the {{tag[0].division}} Divison</p>
+                    <p ng-if="tag.type == 'team' && tag[0].leagueRank > 0"><span class="tag-info">#{{tag[0].leagueRank}}</span> team in the NBA</p>
+                    <p ng-if="tag.type == 'team' && tag[0].positionRank > 0"><span class="tag-info">#{{tag[0].positionRank}}</span> team in the {{tag[0].division}} Divison</p>
                   </div>
-                  <div class="col-sm-3 pull-right">
+                  <div class="col-sm-7">
                     <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
                   </div>
                 </div>
