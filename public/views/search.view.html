@@ -21,9 +21,24 @@
 			<div class="row row-pb-md">
 				<div class="col-md-12">
 					<ul id="gtco-post-list">
-            <div class="search-section entry full">
+            <div class="search-section">
+              <h2>Search Teams</h2>
               <input type="search" class="form-control" ng-model="query" placeholder="Find Player" aria-label="Find Player">
-              <li ng-repeat="tag in tags | filter: query | limitTo: 1" ng-if="tag.type == 'player'">
+              <li class="entry full" ng-repeat="tag in tags | filter: query | limitTo: 1" ng-if="tag.type == 'player'">
+                <div class="mt10 mb20">
+                  <div class="col-sm-9">
+                    <h3><a href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h3>
+                  </div>
+                  <div class="col-sm-3 pull-right">
+                    <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+                  </div>
+                </div>
+              </li>
+            </div>
+            <div class="search-section">
+              <h2>Search Teams</h2>
+              <input type="search" class="form-control" ng-model="query" placeholder="Find Team" aria-label="Find Team">
+              <li class="entry full" ng-repeat="tag in tags | filter: query | limitTo: 1" ng-if="tag.type == 'team'">
                 <div class="mt10 mb20">
                   <div class="col-sm-9">
                     <h3><a href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h3>
