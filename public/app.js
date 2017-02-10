@@ -8,6 +8,11 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
       templateUrl: 'views/home.view.html',
       controller: 'HomeCtrl',
       access: {restricted: false},
+    }).when('/search', {
+      templateUrl: 'views/search.view.html',
+      controller: 'HomeCtrl',
+      title: 'Search',
+      access: {restricted: false}
     }).when('/categories', {
       templateUrl: 'views/categories.view.html',
       controller: 'CategoriesCtrl',
