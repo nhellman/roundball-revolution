@@ -21,24 +21,24 @@
 			<div class="row row-pb-md">
 				<div class="col-md-12">
 					<ul>
-            <!--<div class="search-section">
+            <div class="search-section">
               <h2>Search Players</h2>
               <input type="search" class="form-control" ng-model="playerquery" placeholder="Find Player" aria-label="Find Player">
-              <li class="entry full" ng-repeat="tag in tags | filter: playerquery | limitTo: 1" ng-if="tag.type == 'player'">
-                <div>
-                  <div class="col-sm-5 ranking-info">
-                    <h3 class="mt10 mb20"><a href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h3>
-                    <p class="date-post">{{tag.team}}</p>
-                    <p class="date-post">{{tag.position}}</p>
-                    <p ng-if="tag.type == 'player' && tag.leagueRank > 0">#{{tag.leagueRank}} player in the NBA</p>
-                    <p ng-if="tag.type == 'player' && tag.positionRank > 0">#{{tag.positionRank}} {{tag[0].position}} in the NBA</p>
+                <li class="entry full" ng-repeat="tag in tags | filter: playerquery | limitTo: 1" ng-if="tag.type == 'player'" ng-show="tags.length >= 3 && playerquery && playerquery.length >= 2">
+                  <div>
+                    <div class="col-sm-5 ranking-info">
+                      <h3 class="mt10 mb20"><a href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h3>
+                      <p class="date-post">{{tag.team}}</p>
+                      <p class="date-post">{{tag.position}}</p>
+                      <p ng-if="tag.type == 'player' && tag.leagueRank > 0">#{{tag.leagueRank}} player in the NBA</p>
+                      <p ng-if="tag.type == 'player' && tag.positionRank > 0">#{{tag.positionRank}} {{tag[0].position}} in the NBA</p>
+                    </div>
+                    <div class="col-sm-7">
+                      <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+                    </div>
                   </div>
-                  <div class="col-sm-7">
-                    <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
-                  </div>
-                </div>
-              </li>
-            </div>-->
+                </li>
+            </div>
 					</ul>
 				</div>
         <div class="col-md-12">
