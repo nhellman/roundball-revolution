@@ -68,7 +68,6 @@
               <input type="search" class="form-control" ng-model="articlequery" placeholder="Find Article" aria-label="Find Article">
               <li class="entry full" ng-repeat="article in articles | filter: articlequery | limitTo: 1" ng-show="articles.length >= 3 && articlequery && articlequery.length >= 2">
                 <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
-  								<div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
   								<div class="entry-desc">
   									<h3>{{article.title}}</h3>
   									<p>{{article.blurb}}</p>
