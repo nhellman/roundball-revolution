@@ -2174,8 +2174,11 @@ figure figcaption {
 
 .search-section {
   width: 100%;
-  height: 300px;
   margin-bottom: 100px;
+}
+
+.search-section li {
+  margin-bottom: 50px;
 }
 
 /*.search-section input[type=search] {

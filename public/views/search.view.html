@@ -8,7 +8,7 @@
 					<div class="display-t">
 						<div class="display-tc">
 							<span class="date-post"></span>
-							<h1 class="mb30"><a href="#">Find Your Favorite Player or Team</a></h1>
+							<h1 class="mb30"><a href="#">Search</a></h1>
 						</div>
 					</div>
 				</div>
@@ -22,7 +22,7 @@
 				<div class="col-md-12">
 					<ul>
             <div class="search-section">
-              <h2>Search Players</h2>
+              <h2>SEARCH PLAYERS</h2>
               <input type="search" class="form-control" ng-model="playerquery" placeholder="Find Player" aria-label="Find Player">
                 <li class="entry full" ng-repeat="tag in tags | filter: playerquery | limitTo: 1" ng-if="tag.type == 'player'" ng-show="tags.length >= 3 && playerquery && playerquery.length >= 2">
                   <div>
@@ -44,7 +44,7 @@
         <div class="col-md-12">
 					<ul>
             <div class="search-section">
-              <h2>Search Teams</h2>
+              <h2>SEARCH TEAMS</h2>
               <input type="search" class="form-control" ng-model="teamquery" placeholder="Find Team" aria-label="Find Team">
               <li class="entry full" ng-repeat="tag in tags | filter: teamquery | limitTo: 1" ng-if="tag.type == 'team'" ng-show="tags.length >= 3 && teamquery && teamquery.length >= 2">
                 <div class="mt10 mb20">
