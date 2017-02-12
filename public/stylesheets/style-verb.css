@@ -2168,6 +2168,10 @@ figure figcaption {
   width: 60% !important;
 }
 
+.search-section .entry.full {
+  display: block !important;
+}
+
 .full-image {
   width: 100%;
 }
@@ -2180,10 +2184,6 @@ figure figcaption {
 .search-section li {
   margin-bottom: 50px;
 }
-
-/*.search-section input[type=search] {
-  width: 96%;
-}*/
 
 .search-section .entry {
   background: #fff;
