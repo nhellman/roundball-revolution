@@ -22,7 +22,7 @@
 				<div class="col-md-12">
 					<ul>
             <div class="search-section">
-              <h2>SEARCH PLAYERS</h2>
+              <h2>PLAYERS</h2>
               <input type="search" class="form-control" ng-model="playerquery" placeholder="Find Player" aria-label="Find Player">
                 <li class="entry full" ng-repeat="tag in tags | filter: playerquery | limitTo: 1" ng-if="tag.type == 'player'" ng-show="tags.length >= 3 && playerquery && playerquery.length >= 2">
                   <div>
@@ -44,7 +44,7 @@
         <div class="col-md-12">
 					<ul>
             <div class="search-section">
-              <h2>SEARCH TEAMS</h2>
+              <h2>TEAMS</h2>
               <input type="search" class="form-control" ng-model="teamquery" placeholder="Find Team" aria-label="Find Team">
               <li class="entry full" ng-repeat="tag in tags | filter: teamquery | limitTo: 1" ng-if="tag.type == 'team'" ng-show="tags.length >= 3 && teamquery && teamquery.length >= 2">
                 <div class="mt10 mb20">
@@ -57,6 +57,25 @@
                     <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
                   </div>
                 </div>
+              </li>
+            </div>
+					</ul>
+				</div>
+        <div class="col-md-12">
+					<ul>
+            <div class="search-section">
+              <h2>ARTICLES</h2>
+              <input type="search" class="form-control" ng-model="articlequery" placeholder="Find Team" aria-label="Find Team">
+              <li class="entry full" ng-repeat="article in articles | filter: articlequery | limitTo: 1" ng-show="articles.length >= 3 && teamquery && teamquery.length >= 2">
+                <a href="#/{{article.type}}/{{article.category}}/{{article.slug}}">
+  								<div class="entry-img" ng-style="{'background-image': 'url('+ article.image + ')'}"></div>
+  								<div class="entry-desc">
+  									<h3>{{article.title}}</h3>
+  									<p>{{article.blurb}}</p>
+                    <p><a href="#/articles/author/{{article.author}}" class="text-link">{{article.author}}</a></p>
+  								</div>
+  							</a>
+  							<a href="#/{{article.type}}/{{article.category}}/{{article.slug}}" class="post-meta">{{article.category}}  <span class="date-posted"><time am-time-ago="article.date"></time></span></a>
               </li>
             </div>
 					</ul>
