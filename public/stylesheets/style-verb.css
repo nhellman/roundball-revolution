@@ -2165,7 +2165,7 @@ figure figcaption {
 }
 
 .narrow-image {
-  width: 60%;
+  width: 60% !important;
 }
 
 .full-image {
