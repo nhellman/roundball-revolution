@@ -46,7 +46,7 @@
             <div class="search-section">
               <h2>Search Teams</h2>
               <input type="search" class="form-control" ng-model="teamquery" placeholder="Find Team" aria-label="Find Team">
-              <li class="entry full" ng-repeat="tag in tags | filter: teamquery | limitTo: 1" ng-if="tag.type == 'team'">
+              <li class="entry full" ng-repeat="tag in tags | filter: teamquery | limitTo: 1" ng-if="tag.type == 'team'" ng-show="tags.length >= 3 && teamquery && teamquery.length >= 2">
                 <div class="mt10 mb20">
                   <div class="col-sm-5 ranking-info">
                     <h3><a href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h3>
