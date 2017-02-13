@@ -2189,4 +2189,10 @@ figure figcaption {
   width: 100% !important;
 }
 
+.logout {
+  background: #F73859;
+  padding-top: 120px;
+  padding-bottom: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */
