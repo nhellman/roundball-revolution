@@ -2195,4 +2195,11 @@ figure figcaption {
   padding-bottom: 20px;
 }
 
+.counter h2 {
+  background: #F73859;
+  padding: 15px;
+  display: inline-block;
+  float: left;
+}
+
 /*# sourceMappingURL=style.css.map */
