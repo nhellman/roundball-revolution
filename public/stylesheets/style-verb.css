@@ -2185,6 +2185,9 @@ figure figcaption {
   background: #fff;
 }
 
+.backend img {
+  width: 100% !important;
+}
 
 
 /*# sourceMappingURL=style.css.map */

@@ -1,15 +1,9 @@
-<div ng-controller="LogoutCtrl">
-  <a ng-click='logout()' class="btn btn-default">Logout</a>
+<div ng-controller="LogoutCtrl" class="ng-scope">
+  <a ng-click="logout()" class="btn btn-default">Logout</a>
 </div>
 
-<div class="backend-container">
-	<div class="row">
-		<div class="col-xs-12">
-			<h2 class="heading">Welcome to the Backend</h2>
-		</div>
-	</div>
-
-	<div ng-controller="ArticlesCtrl">
+<div ng-controller="ArticlesCtrl">
+  <div class="container backend">
 	  <div class="backend-header clearout-top">
 	    <div class="row">
 	      <div class="col-md-6">
@@ -44,7 +38,7 @@
 	      </div>
 	    </div>
 	    <div ng-repeat="article in articles.slice().reverse() | limitTo: 5 | filter: q as results ">
-	      <div class="row spacer-bottom">
+	      <div class="row mb20">
 	        <div class="col-sm-3">
 	          <h4><a href="/articles/author/{{author.name}}">{{article.title}}</a></h4>
 	        </div>
@@ -62,11 +56,7 @@
 	        </div>
 	      </div>
 	    </div>
-	    <div ng-if="articles == false">
-	      No articles to display
-	    </div>
 	  </div>
-	</div>
 
 	<hr>
 
@@ -102,7 +92,7 @@
 	        </div>
 	      </div>
 	      <div ng-repeat="author in authors | limitTo: 10 | filter: q as results">
-	        <div class="row spacer-bottom">
+	        <div class="row mb20">
 	          <div class="col-sm-3">
 	            <h4>{{author.name}}</h4>
 	          </div>
@@ -116,9 +106,6 @@
 	            <a href="/authors/edit/{{author._id}}" class="btn btn-default">Edit</a>
 	          </div>
 	        </div>
-	      </div>
-	      <div ng-if="authors == false">
-	        No Authors to display
 	      </div>
 	  </div>
 	</div>
@@ -161,7 +148,7 @@
 	      </div>
 	      </div>
 	    <div ng-repeat="tag in tags | filter: q as results">
-	      <div class="row spacer-bottom">
+	      <div class="row mb20">
 	        <div class="col-sm-3">
 	          <h4><a class="capped bold" href="/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
 	        </div>
@@ -179,11 +166,6 @@
 	        </div>
 	      </div>
 	    </div>
-	    <div ng-if="tag == false">
-	      No Tag to display
-	    </div>
 	  </div>
-	</div>
-
-
+  </div>
 </div>
