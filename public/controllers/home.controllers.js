@@ -1,6 +1,6 @@
 angular.module('kB')
 
-.controller('HomeCtrl', ['$scope', '$http', '$resource', function($scope, $http, $resource) {
+.controller('HomeCtrl', ['$scope', '$http', '$resource', '$location', function($scope, $http, $resource, $location) {
   $http.get('/articles').success(function(data) {
     $scope.articles = data;
   });
