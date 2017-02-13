@@ -1,42 +1,31 @@
-<div ng-controller="LogoutCtrl" class="ng-scope">
-  <a ng-click="logout()" class="btn btn-default">Logout</a>
-</div>
+<div class="container">
 
-<div ng-controller="ArticlesCtrl">
-  <div class="container backend">
-	  <div class="backend-header clearout-top">
-	    <div class="row">
-	      <div class="col-md-6">
-	        <h1><a href="/backend/articles">ARTICLES</a></h1>
-	      </div>
-	      <div class="col-md-6">
-	        <a href="/articles/add" class="btn btn-default btn-info pull-right">Add Article</a>
-	      </div>
-	    </div>
-	    <div class="row">
-	      <div class="col-sm-12">
-	        <input type="search" class="form-control" ng-model="q" placeholder="Find Articles" aria-label="Find Articles">
-	      </div>
-	    </div>
-	  </div>
+  <div ng-controller="LogoutCtrl" class="ng-scope">
+    <a ng-click="logout()" class="btn btn-default">Logout</a>
+  </div>
+
+  <div ng-controller="ArticlesCtrl">
+    <header id="gtco-header" class="gtco-cover gtco-cover-xsm" role="banner" style="background-image:url(images/img_1.jpg);" data-stellar-background-ratio="0.5">
+  		<div class="overlay"></div>
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-md-7 text-left">
+  					<div class="display-t">
+  						<div class="display-tc">
+  							<span class="date-post"></span>
+  							<h1 class="mb30"><a href="#">Articles</a></h1>
+  						</div>
+  					</div>
+  				</div>
+          <div class="col-md-5">
+            <div ng-repeat="article in articles"></div>
+            <p>{{articles.legnth}}</p>
+    	      <a href="/articles/add" class="btn btn-default btn-info pull-right">Add Article</a>
+          </div>
+  			</div>
+  		</div>
+  	</header>
 	  <div class="articles">
-	    <div class="row">
-	      <div class="col-sm-3">
-	        <h4>HEADLINE</h4>
-	      </div>
-	      <div class="col-sm-3">
-	        <h4>PHOTO</h4>
-	      </div>
-	      <div class="col-sm-2">
-	        <h4>AUTHOR</h4>
-	      </div>
-	      <div class="col-sm-2">
-	        <h4>DATE</h4>
-	      </div>
-	      <div class="col-sm-2">
-	        <h4>EDIT</h4>
-	      </div>
-	    </div>
 	    <div ng-repeat="article in articles.slice().reverse() | limitTo: 5 | filter: q as results ">
 	      <div class="row mb20">
 	        <div class="col-sm-3">
@@ -57,6 +46,7 @@
 	      </div>
 	    </div>
 	  </div>
+  </div>
 
 	<hr>
 
@@ -71,26 +61,12 @@
 	      </div>
 	    </div>
 	    <div class="row">
-	      <div class="col-sm-12">
+	      <div class="col-sm-12 mb30">
 	        <input type="search" class="form-control" ng-model="q" placeholder="Find Authors" aria-label="Find Authors">
 	      </div>
 	    </div>
 	  </div>
 	    <div class="authors">
-	      <div class="row">
-	        <div class="col-sm-3">
-	          <h4>NAME</h4>
-	        </div>
-	        <div class="col-sm-4">
-	          <h4>PHOTO</h4>
-	        </div>
-	        <div class="col-sm-3">
-	          <h4>BIO</h4>
-	        </div>
-	        <div class="col-sm-2">
-	          <h4>EDIT</h4>
-	        </div>
-	      </div>
 	      <div ng-repeat="author in authors | limitTo: 10 | filter: q as results">
 	        <div class="row mb20">
 	          <div class="col-sm-3">
@@ -123,30 +99,12 @@
 	      </div>
 	    </div>
 	    <div class="row">
-	      <div class="col-sm-12">
+	      <div class="col-sm-12 mb30">
 	        <input type="search" class="form-control" ng-model="q" placeholder="Find Tags" aria-label="Find Tags">
 	      </div>
 	    </div>
 	  </div>
 	  <div class="tags">
-	      <div class="row">
-	        <div class="col-sm-3">
-	          <h4>NAME</h4>
-	        </div>
-	        <div class="col-sm-2">
-	          <h4>PHOTO</h4>
-	        </div>
-	        <div class="col-sm-2">
-	          <h4>CONFERENCE</h4>
-	        </div>
-	        <div class="col-sm-2">
-	          <h4>DIVISION</h4>
-	        </div>
-	        <div class="col-sm-3">
-	          <h4>EDIT</h4>
-	        </div>
-	      </div>
-	      </div>
 	    <div ng-repeat="tag in tags | filter: q as results">
 	      <div class="row mb20">
 	        <div class="col-sm-3">
@@ -168,4 +126,5 @@
 	    </div>
 	  </div>
   </div>
+
 </div>

@@ -17,12 +17,6 @@
 							<span class="date-post"></span>
               <span class="date-post">Writing for Roundball Revolution since <span ng-bind="author[0].date | date: 'mediumDate'"></span></span>
 							<h1 class="mb20 mt10"><span>{{author[0].name}}</span></h1>
-              <div class="ranking-info">
-                <p ng-if="tag[0].type == 'player' && tag[0].leagueRank > 0"><span class="tag-info">#{{tag[0].leagueRank}}</span> player in the NBA</p>
-                <p ng-if="tag[0].type == 'team' && tag[0].leagueRank > 0"><span class="tag-info">#{{tag[0].leagueRank}}</span> team in the NBA</p>
-                <p ng-if="tag[0].type == 'player' && tag[0].positionRank > 0"><span class="tag-info">#{{tag[0].positionRank}}</span> {{tag[0].position}} in the NBA</p>
-                <p ng-if="tag[0].type == 'team' && tag[0].positionRank > 0"><span class="tag-info">#{{tag[0].positionRank}}</span> team in the {{tag[0].division}} Divison</p>
-              </div>
 						</div>
 					</div>
 				</div>
