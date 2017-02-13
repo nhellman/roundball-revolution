@@ -1,8 +1,11 @@
   <div ng-controller="LogoutCtrl" class="ng-scope">
-    <a ng-click="logout()" class="btn btn-default">Logout</a>
+    <div class="container logout" style="background-image:url(images/img_1.jpg);">
+      <a ng-click="logout()" class="btn btn-default">Logout</a>
+    </div>
   </div>
 
   <div ng-controller="ArticlesCtrl">
+
     <header id="gtco-header" class="gtco-cover gtco-cover-xsm" role="banner" style="background-image:url(images/img_1.jpg);" data-stellar-background-ratio="0.5">
   		<div class="overlay"></div>
   		<div class="container">
@@ -23,7 +26,8 @@
   			</div>
   		</div>
   	</header>
-	  <div class="container">
+
+	  <div class="container backend">
       <div class="row">
 	      <div class="col-sm-12 mb30">
 	        <input type="search" class="form-control" ng-model="articlesearch" placeholder="Find Articles" aria-label="Find Articles">
@@ -49,11 +53,13 @@
 	      </div>
 	    </div>
 	  </div>
+
   </div>
 
 	<hr>
 
 	<div ng-controller="AuthorCtrl">
+
     <header id="gtco-header" class="gtco-cover gtco-cover-xsm" role="banner" style="background-image:url(images/img_1.jpg);" data-stellar-background-ratio="0.5">
   		<div class="overlay"></div>
   		<div class="container">
@@ -74,34 +80,37 @@
   			</div>
   		</div>
   	</header>
-	    <div class="container">
-        <div class="row">
-  	      <div class="col-sm-12 mb30">
-  	        <input type="search" class="form-control" ng-model="authorsearch" placeholder="Find Authors" aria-label="Find Authors">
-  	      </div>
-  	    </div>
-	      <div ng-repeat="author in authors | limitTo: 10 | filter: authorsearch as results">
-	        <div class="row mb20">
-	          <div class="col-sm-3">
-	            <h4>{{author.name}}</h4>
-	          </div>
-	          <div class="col-sm-4">
-	            <div><img ng-src={{author.image}}></div>
-	          </div>
-	          <div class="col-sm-3">
-	            <p ng-bind-html="author.bio"></p>
-	          </div>
-	          <div class="col-sm-2">
-	            <a href="/authors/edit/{{author._id}}" class="btn btn-default">Edit</a>
-	          </div>
-	        </div>
+
+    <div class="container backend">
+      <div class="row">
+	      <div class="col-sm-12 mb30">
+	        <input type="search" class="form-control" ng-model="authorsearch" placeholder="Find Authors" aria-label="Find Authors">
 	      </div>
+	    </div>
+      <div ng-repeat="author in authors | limitTo: 10 | filter: authorsearch as results">
+        <div class="row mb20">
+          <div class="col-sm-3">
+            <h4>{{author.name}}</h4>
+          </div>
+          <div class="col-sm-4">
+            <div><img ng-src={{author.image}}></div>
+          </div>
+          <div class="col-sm-3">
+            <p ng-bind-html="author.bio"></p>
+          </div>
+          <div class="col-sm-2">
+            <a href="/authors/edit/{{author._id}}" class="btn btn-default">Edit</a>
+          </div>
+        </div>
+      </div>
 	  </div>
+
 	</div>
 
 	<hr>
 
 	<div ng-controller="TagCtrl">
+
     <header id="gtco-header" class="gtco-cover gtco-cover-xsm" role="banner" style="background-image:url(images/img_1.jpg);" data-stellar-background-ratio="0.5">
   		<div class="overlay"></div>
   		<div class="container">
@@ -122,7 +131,8 @@
   			</div>
   		</div>
   	</header>
-	  <div class="container">
+
+	  <div class="container backend">
       <div class="row">
 	      <div class="col-sm-12 mb30">
 	        <input type="search" class="form-control" ng-model="tagsearch" placeholder="Find Tags" aria-label="Find Tags">
@@ -148,4 +158,5 @@
 	      </div>
 	    </div>
 	  </div>
+
   </div>
