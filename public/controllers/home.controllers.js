@@ -13,6 +13,8 @@ angular.module('kB')
     $scope.tags = data;
   });
 
+  $scope.currentPath = $location.path();
+
   //$http.get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=hoopsrevolution').success(function() {
   	//$scope.twitter = data;
   	//console.log(data);
