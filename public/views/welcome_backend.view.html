@@ -21,9 +21,13 @@
   					</div>
   				</div>
           <div class="col-md-5">
-            <div ng-repeat="article in articles"></div>
-            <p>{{articles.length}}</p>
-    	      <a href="#/articles/add" class="btn btn-default btn-info pull-right">Add Article</a>
+            <div class="display-t">
+  						<div class="display-tc">
+                <div ng-repeat="article in articles"></div>
+                <p>{{articles.length}}</p>
+        	      <a href="#/articles/add" class="btn btn-default btn-info pull-right">Add Article</a>
+              </div>
+            </div>
           </div>
   			</div>
   		</div>
