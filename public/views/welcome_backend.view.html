@@ -1,5 +1,3 @@
-<div class="container">
-
   <div ng-controller="LogoutCtrl" class="ng-scope">
     <a ng-click="logout()" class="btn btn-default">Logout</a>
   </div>
@@ -19,14 +17,19 @@
   				</div>
           <div class="col-md-5">
             <div ng-repeat="article in articles"></div>
-            <p>{{articles.legnth}}</p>
+            <p>{{articles.length}}</p>
     	      <a href="/articles/add" class="btn btn-default btn-info pull-right">Add Article</a>
           </div>
   			</div>
   		</div>
   	</header>
-	  <div class="articles">
-	    <div ng-repeat="article in articles.slice().reverse() | limitTo: 5 | filter: q as results ">
+	  <div class="container">
+      <div class="row">
+	      <div class="col-sm-12 mb30">
+	        <input type="search" class="form-control" ng-model="articlesearch" placeholder="Find Articles" aria-label="Find Articles">
+	      </div>
+	    </div>
+	    <div ng-repeat="article in articles.slice().reverse() | limitTo: 5 | filter: articlesearch as results ">
 	      <div class="row mb20">
 	        <div class="col-sm-3">
 	          <h4><a href="/articles/author/{{author.name}}">{{article.title}}</a></h4>
@@ -51,23 +54,33 @@
 	<hr>
 
 	<div ng-controller="AuthorCtrl">
-	  <div class="backend-header">
-	    <div class="row">
-	      <div class="col-md-6">
-	        <h1><a href="/backend/authors">AUTHORS</a></h1>
-	      </div>
-	      <div class="col-md-6">
-	        <a href="/authors/add" class="btn btn-default btn-info pull-right">Add Author</a>
-	      </div>
-	    </div>
-	    <div class="row">
-	      <div class="col-sm-12 mb30">
-	        <input type="search" class="form-control" ng-model="q" placeholder="Find Authors" aria-label="Find Authors">
-	      </div>
-	    </div>
-	  </div>
-	    <div class="authors">
-	      <div ng-repeat="author in authors | limitTo: 10 | filter: q as results">
+    <header id="gtco-header" class="gtco-cover gtco-cover-xsm" role="banner" style="background-image:url(images/img_1.jpg);" data-stellar-background-ratio="0.5">
+  		<div class="overlay"></div>
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-md-7 text-left">
+  					<div class="display-t">
+  						<div class="display-tc">
+  							<span class="date-post"></span>
+  							<h1 class="mb30"><a href="#">Authors</a></h1>
+  						</div>
+  					</div>
+  				</div>
+          <div class="col-md-5">
+            <div ng-repeat="author in authors"></div>
+            <p>{{authors.length}}</p>
+    	      <a href="/authors/add" class="btn btn-default btn-info pull-right">Add Author</a>
+          </div>
+  			</div>
+  		</div>
+  	</header>
+	    <div class="container">
+        <div class="row">
+  	      <div class="col-sm-12 mb30">
+  	        <input type="search" class="form-control" ng-model="authorsearch" placeholder="Find Authors" aria-label="Find Authors">
+  	      </div>
+  	    </div>
+	      <div ng-repeat="author in authors | limitTo: 10 | filter: authorsearch as results">
 	        <div class="row mb20">
 	          <div class="col-sm-3">
 	            <h4>{{author.name}}</h4>
@@ -89,23 +102,33 @@
 	<hr>
 
 	<div ng-controller="TagCtrl">
-	  <div class="backend-header">
-	    <div class="row">
-	      <div class="col-md-6">
-	        <h1><a href="/backend/tags">TAGS</a></h1>
-	      </div>
-	      <div class="col-md-6">
-	        <a href="/tags/add" class="btn btn-default btn-info pull-right">Add Tag</a>
-	      </div>
-	    </div>
-	    <div class="row">
+    <header id="gtco-header" class="gtco-cover gtco-cover-xsm" role="banner" style="background-image:url(images/img_1.jpg);" data-stellar-background-ratio="0.5">
+  		<div class="overlay"></div>
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-md-7 text-left">
+  					<div class="display-t">
+  						<div class="display-tc">
+  							<span class="date-post"></span>
+  							<h1 class="mb30"><a href="#">Tags</a></h1>
+  						</div>
+  					</div>
+  				</div>
+          <div class="col-md-5">
+            <div ng-repeat="tag in tags"></div>
+            <p>{{tags.length}}</p>
+    	      <a href="/tags/add" class="btn btn-default btn-info pull-right">Add Tag</a>
+          </div>
+  			</div>
+  		</div>
+  	</header>
+	  <div class="container">
+      <div class="row">
 	      <div class="col-sm-12 mb30">
-	        <input type="search" class="form-control" ng-model="q" placeholder="Find Tags" aria-label="Find Tags">
+	        <input type="search" class="form-control" ng-model="tagsearch" placeholder="Find Tags" aria-label="Find Tags">
 	      </div>
 	    </div>
-	  </div>
-	  <div class="tags">
-	    <div ng-repeat="tag in tags | filter: q as results">
+	    <div ng-repeat="tag in tags | filter: tagsearch as results">
 	      <div class="row mb20">
 	        <div class="col-sm-3">
 	          <h4><a class="capped bold" href="/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
@@ -126,5 +149,3 @@
 	    </div>
 	  </div>
   </div>
-
-</div>
