@@ -17,14 +17,14 @@
   					<div class="display-t">
   						<div class="display-tc">
   							<span class="date-post"></span>
-  							<h1 class="mb30"><a href="#">Articles</a></h1>
+  							<h1 class="mb30"><a href="#/articles">Articles</a></h1>
   						</div>
   					</div>
   				</div>
           <div class="col-md-5">
             <div ng-repeat="article in articles"></div>
             <p>{{articles.length}}</p>
-    	      <a href="/articles/add" class="btn btn-default btn-info pull-right">Add Article</a>
+    	      <a href="#/articles/add" class="btn btn-default btn-info pull-right">Add Article</a>
           </div>
   			</div>
   		</div>
@@ -39,7 +39,7 @@
 	    <div ng-repeat="article in articles.slice().reverse() | limitTo: 5 | filter: articlesearch as results ">
 	      <div class="row mb20">
 	        <div class="col-sm-3">
-	          <h4><a href="/articles/author/{{author.name}}">{{article.title}}</a></h4>
+	          <h4><a href="#/articles/author/{{author.name}}">{{article.title}}</a></h4>
 	        </div>
 	        <div class="col-sm-3">
 	          <img ng-src={{article.image}}>
@@ -51,7 +51,7 @@
 	          <p><span ng-bind="article.date | date: 'MM/dd/yyyy'"></span></p>
 	        </div>
 	        <div class="col-sm-2">
-	          <a class="btn btn-default" href="/articles/edit/{{article._id}}">Edit Article</a>
+	          <a class="btn btn-default" href="#/articles/edit/{{article._id}}">Edit Article</a>
 	        </div>
 	      </div>
 	    </div>
@@ -71,14 +71,14 @@
   					<div class="display-t">
   						<div class="display-tc">
   							<span class="date-post"></span>
-  							<h1 class="mb30"><a href="#">Authors</a></h1>
+  							<h1 class="mb30"><a href="#/authors">Authors</a></h1>
   						</div>
   					</div>
   				</div>
           <div class="col-md-5">
             <div ng-repeat="author in authors"></div>
             <p>{{authors.length}}</p>
-    	      <a href="/authors/add" class="btn btn-default btn-info pull-right">Add Author</a>
+    	      <a href="#/authors/add" class="btn btn-default btn-info pull-right">Add Author</a>
           </div>
   			</div>
   		</div>
@@ -102,7 +102,7 @@
             <p ng-bind-html="author.bio"></p>
           </div>
           <div class="col-sm-2">
-            <a href="/authors/edit/{{author._id}}" class="btn btn-default">Edit</a>
+            <a href="#/authors/edit/{{author._id}}" class="btn btn-default">Edit</a>
           </div>
         </div>
       </div>
@@ -122,14 +122,14 @@
   					<div class="display-t">
   						<div class="display-tc">
   							<span class="date-post"></span>
-  							<h1 class="mb30"><a href="#">Tags</a></h1>
+  							<h1 class="mb30"><a href="#/tags">Tags</a></h1>
   						</div>
   					</div>
   				</div>
           <div class="col-md-5">
             <div ng-repeat="tag in tags"></div>
             <p>{{tags.length}}</p>
-    	      <a href="/tags/add" class="btn btn-default btn-info pull-right">Add Tag</a>
+    	      <a href="/#tags/add" class="btn btn-default btn-info pull-right">Add Tag</a>
           </div>
   			</div>
   		</div>
@@ -144,7 +144,7 @@
 	    <div ng-repeat="tag in tags | filter: tagsearch as results">
 	      <div class="row mb20">
 	        <div class="col-sm-3">
-	          <h4><a class="capped bold" href="/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+	          <h4><a class="capped bold" href="/#tags/details/{{tag.name}}">{{tag.name}}</a></h4>
 	        </div>
 	        <div class="col-sm-2">
 	        	<img ng-src={{tag.image}}>
@@ -156,7 +156,7 @@
 	        	<p class="capped">{{tag.division}}</p>
 	        </div>
 	        <div class="col-sm-3">
-	          <a href="/tags/edit/{{tag._id}}" class="btn btn-default">Edit</a>
+	          <a href="/#tags/edit/{{tag._id}}" class="btn btn-default">Edit</a>
 	        </div>
 	      </div>
 	    </div>
