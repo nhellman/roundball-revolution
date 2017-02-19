@@ -1,9 +1,25 @@
 <div ng-controller="TagsCreateCtrl">
-	<div class="row">
-		<div class="col-md-7 center-block">
-			<div class="backend-container">
-			  <h3 class="heading">Add Tag</h3>
-			  <form ng-submit="addTag()">
+
+	<header id="gtco-header" class="gtco-cover gtco-cover-xsm mb20" role="banner" style="background-image:url(images/img_1.jpg);" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 text-left">
+          <div class="display-t">
+            <div class="display-tc">
+              <span class="date-post">Add Tag</span>
+              <h1>Tags</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 mb30">
+				<form ng-submit="addTag()">
 			    <fieldset class="form-group">
 			      <label>Name</label>
 			      <input type="text" class="form-control" ng-model="name" name="name" placeholder="Enter Name">
@@ -92,7 +108,8 @@
 			    <button type="submit" class="btn btn-default">Submit</button>
 			    <a href="#/categories" class="btn btn-danger">Cancel</a>
 			  </form>
-		  </div>
+			</div>
 		</div>
 	</div>
+		
 </div>
