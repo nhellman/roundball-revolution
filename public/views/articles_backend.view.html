@@ -1,41 +1,55 @@
-<div ng-controller="ArticlesCtrl">
-  <div class="backend-header">
-    <div class="row">
-      <div class="col-md-6">
-        <h1>ARTICLES</h1>
-      </div>
-      <div class="col-md-6">
-        <a href="/articles/add" class="btn btn-default btn-info pull-right">Add Article</a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <input type="search" class="form-control" ng-model="q" placeholder="Find Articles" aria-label="Find Articles">
+<div ng-controller="LogoutCtrl" class="ng-scope">
+  <div class="logout">
+    <div class="container">
+      <div class="display-t">
+        <a ng-click="logout()" class="btn btn-default">Logout</a>
+        <div class="display-tc">
+        </div>
       </div>
     </div>
   </div>
-  <div class="articles">
-    <div class="row">
-      <div class="col-sm-3">
-        <h4>HEADLINE</h4>
-      </div>
-      <div class="col-sm-3">
-        <h4>PHOTO</h4>
-      </div>
-      <div class="col-sm-2">
-        <h4>AUTHOR</h4>
-      </div>
-      <div class="col-sm-2">
-        <h4>DATE</h4>
-      </div>
-      <div class="col-sm-2">
-        <h4>EDIT</h4>
+</div>
+
+<div ng-controller="ArticlesCtrl">
+
+  <header id="gtco-header" class="gtco-cover gtco-cover-xsm mb20" role="banner" style="background-image:url(images/img_1.jpg);" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 text-left">
+          <div class="display-t">
+            <div class="display-tc">
+              <span class="date-post"></span>
+              <h1><a href="#/articles">Articles</a></h1>
+              <div ng-repeat="article in articles"></div>
+              <div class="counter">
+                <h2>{{articles.length}}</h2>
+                <p> Articles</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="display-t">
+            <div class="display-tc">
+              <a href="#/articles/add" class="btn btn-default btn-info pull-right">Add Article</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div ng-repeat="article in articles.slice().reverse() | filter: q as results">
-      <div class="row spacer-bottom">
+  </header>
+
+  <div class="container backend">
+    <div class="row">
+      <div class="col-sm-12 mb30">
+        <input type="search" class="form-control" ng-model="articlesearch" placeholder="Find Articles" aria-label="Find Articles">
+      </div>
+    </div>
+    <div ng-repeat="article in articles.slice().reverse() | filter: articlesearch as results ">
+      <div class="row mb20">
         <div class="col-sm-3">
-          <h4><a href="/articles/author/{{author.name}}">{{article.title}}</a></h4>
+          <h4><a href="#/articles/author/{{author.name}}">{{article.title}}</a></h4>
         </div>
         <div class="col-sm-3">
           <img ng-src={{article.image}}>
@@ -47,12 +61,10 @@
           <p><span ng-bind="article.date | date: 'MM/dd/yyyy'"></span></p>
         </div>
         <div class="col-sm-2">
-          <a class="btn btn-default" href="/articles/edit/{{article._id}}">Edit Article</a>
+          <a class="btn btn-default" href="#/articles/edit/{{article._id}}">Edit Article</a>
         </div>
       </div>
     </div>
-    <div ng-if="articles == false">
-      No articles to display
-    </div>
   </div>
+
 </div>

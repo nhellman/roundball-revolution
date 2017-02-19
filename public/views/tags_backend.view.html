@@ -1,37 +1,70 @@
-<div ng-controller="TagCtrl">
-  <div class="backend-container">
-    <div class="row heading">
-      <div class="col-md-6">
-        <h1>TAGS</h1>
-      </div>
-      <div class="col-md-6">
-        <a href="/tags/add" class="btn btn-default btn-info pull-right">Add Tag</a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <input type="search" class="form-control" ng-model="q" placeholder="Find Tags" aria-label="Find Tags">
-      </div>
-    </div>
-    <div class="tags">
-        <div class="">
-          <div class="col-sm-6">
-            <h4>NAME</h4>
-          </div>
-          <div class="col-sm-6">
-            <h4>EDIT</h4>
-          </div>
-        </div>
-      <div ng-repeat="tag in tags | filter: q as results">
-        <div class="row spacer-bottom">
-          <div class="col-sm-6">
-            <h4><a class="btn btn-default" href="/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
-          </div>
-          <div class="col-sm-6">
-            <a href="/tags/edit/{{tag._id}}" class="btn btn-default">Edit</a>
-          </div>
+<div ng-controller="LogoutCtrl" class="ng-scope">
+  <div class="logout">
+    <div class="container">
+      <div class="display-t">
+        <a ng-click="logout()" class="btn btn-default">Logout</a>
+        <div class="display-tc">
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<div ng-controller="TagCtrl">
+
+  <header id="gtco-header" class="gtco-cover gtco-cover-xsm mb20" role="banner" style="background-image:url(images/img_1.jpg);" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 text-left">
+          <div class="display-t">
+            <div class="display-tc">
+              <span class="date-post"></span>
+              <h1><a href="#/tags">Tags</a></h1>
+              <div ng-repeat="tag in tags"></div>
+              <div class="counter">
+                <h2>{{tags.length}}</h2>
+                <p> Tags</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="display-t">
+            <div class="display-tc">
+              <a href="#/tags/add" class="btn btn-default btn-info pull-right">Add Tag</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container backend">
+    <div class="row">
+      <div class="col-sm-12 mb30">
+        <input type="search" class="form-control" ng-model="tagsearch" placeholder="Find Tags" aria-label="Find Tags">
+      </div>
+    </div>
+    <div ng-repeat="tag in tags | filter: tagsearch as results">
+      <div class="row mb20">
+        <div class="col-sm-3">
+          <h4><a class="capped bold" href="/#tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+        </div>
+        <div class="col-sm-2">
+          <img ng-src={{tag.image}}>
+        </div>
+        <div class="col-sm-2">
+          <p class="capped">{{tag.conference}}</p>
+        </div>
+        <div class="col-sm-2">
+          <p class="capped">{{tag.division}}</p>
+        </div>
+        <div class="col-sm-3">
+          <a href="/#tags/edit/{{tag._id}}" class="btn btn-default">Edit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>

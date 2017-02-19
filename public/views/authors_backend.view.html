@@ -1,52 +1,67 @@
-<div ng-controller="AuthorCtrl">
-  <div class="backend-header">
-    <div class="row">
-      <div class="col-md-6">
-        <h1>AUTHORS</h1>
-      </div>
-      <div class="col-md-6">
-        <a href="#/authors/add" class="btn btn-default btn-info pull-right">Add Author</a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <input type="search" class="form-control" ng-model="q" placeholder="Find Authors" aria-label="Find Authors">
+<div ng-controller="LogoutCtrl" class="ng-scope">
+  <div class="logout">
+    <div class="container">
+      <div class="display-t">
+        <a ng-click="logout()" class="btn btn-default">Logout</a>
+        <div class="display-tc">
+        </div>
       </div>
     </div>
   </div>
-    <div class="authors">
+</div>
+
+<div ng-controller="AuthorCtrl">
+
+  <header id="gtco-header" class="gtco-cover gtco-cover-xsm mb20" role="banner" style="background-image:url(images/img_1.jpg);" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
       <div class="row">
+        <div class="col-md-7 text-left">
+          <div class="display-t">
+            <div class="display-tc">
+              <span class="date-post"></span>
+              <h1><a href="#/articles">Authors</a></h1>
+              <div ng-repeat="author in authors"></div>
+              <div class="counter">
+                <h2>{{atuhors.length}}</h2>
+                <p> Authors</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="display-t">
+            <div class="display-tc">
+              <a href="#/authors/add" class="btn btn-default btn-info pull-right">Add Author</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container backend">
+    <div class="row">
+      <div class="col-sm-12 mb30">
+        <input type="search" class="form-control" ng-model="authorsearch" placeholder="Find Authors" aria-label="Find Authors">
+      </div>
+    </div>
+    <div ng-repeat="author in authors | filter: authorsearch as results">
+      <div class="row mb20">
         <div class="col-sm-3">
-          <h4>NAME</h4>
+          <h4>{{author.name}}</h4>
         </div>
         <div class="col-sm-4">
-          <h4>PHOTO</h4>
+          <div><img ng-src={{author.image}}></div>
         </div>
         <div class="col-sm-3">
-          <h4>BIO</h4>
+          <p ng-bind-html="author.bio"></p>
         </div>
         <div class="col-sm-2">
-          <h4>EDIT</h4>
+          <a href="#/authors/edit/{{author._id}}" class="btn btn-default">Edit</a>
         </div>
       </div>
-      <div ng-repeat="author in authors | filter: q as results">
-        <div class="row spacer-bottom">
-          <div class="col-sm-3">
-            <h4>{{author.name}}</h4>
-          </div>
-          <div class="col-sm-4">
-            <div><img ng-src={{author.image}}></div>
-          </div>
-          <div class="col-sm-3">
-            <p ng-bind-html="author.bio"></p>
-          </div>
-          <div class="col-sm-2">
-            <a href="/authors/edit/{{author._id}}" class="btn btn-default">Edit</a>
-          </div>
-        </div>
-      </div>
-      <div ng-if="authors == false">
-        No Authors to display
-      </div>
+    </div>
   </div>
+
 </div>

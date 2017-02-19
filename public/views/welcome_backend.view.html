@@ -165,7 +165,7 @@
 	        <input type="search" class="form-control" ng-model="tagsearch" placeholder="Find Tags" aria-label="Find Tags">
 	      </div>
 	    </div>
-	    <div ng-repeat="tag in tags | filter: tagsearch as results">
+	    <div ng-repeat="tag in tags | limitTo: 10 | filter: tagsearch as results">
 	      <div class="row mb20">
 	        <div class="col-sm-3">
 	          <h4><a class="capped bold" href="/#tags/details/{{tag.name}}">{{tag.name}}</a></h4>
