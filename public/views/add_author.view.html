@@ -1,20 +1,43 @@
 <div ng-controller="AuthorsCreateCtrl">
-  <h3>Add Author</h3>
-  <form ng-submit="addAuthor()">
-    <fieldset class="form-group">
-      <label>Name</label>
-      <input type="text" class="form-control" ng-model="name" name="name" placeholder="Enter Name">
-    </fieldset>
-    <fieldset class="form-group">
-      <label>Bio</label>
-      <text-angular ng-model="bio" name="bio" rows="5" placeholder="Enter Author Bio"></text-angular>
-    </fieldset>
-    <fieldset class="form-group">
-      <label>Image</label>
-      <input type="text" class="form-control" ng-model="image" name="image" placeholder="Enter Image URL">
-      <img ng-src="{{image}}">
-    </fieldset>
-    <button type="submit" class="btn btn-default">Submit</button>
-    <a href="#/categories" class="btn btn-danger">Cancel</a>
-  </form>
+
+  <header id="gtco-header" class="gtco-cover gtco-cover-xsm mb20" role="banner" style="background-image:url(images/img_1.jpg);" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 text-left">
+          <div class="display-t">
+            <div class="display-tc">
+              <span class="date-post">Add Author</span>
+              <h1>Authors</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+		<div class="row">
+			<div class="col-sm-12 mb30">
+        <form ng-submit="addAuthor()">
+          <fieldset class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" ng-model="name" name="name" placeholder="Enter Name">
+          </fieldset>
+          <fieldset class="form-group">
+            <label>Bio</label>
+            <text-angular ng-model="bio" name="bio" rows="5" placeholder="Enter Author Bio"></text-angular>
+          </fieldset>
+          <fieldset class="form-group">
+            <label>Image</label>
+            <input type="text" class="form-control" ng-model="image" name="image" placeholder="Enter Image URL">
+            <img ng-src="{{image}}">
+          </fieldset>
+          <button type="submit" class="btn btn-default">Submit</button>
+          <a href="#/categories" class="btn btn-danger">Cancel</a>
+        </form>
+      </div>
+    </div>
+  </div>
+
 </div>
