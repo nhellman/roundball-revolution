@@ -27,7 +27,7 @@
                   <div class="gtco-blurb">
                     <p>{{article[0].blurb}}</p>
                   </div>
-                  <p ta-bind ng-bind-html="article[0].body"></p>
+                  <p ta-bind ng-model="article[0].body"></p>
                   <div class="tag" ng-repeat="tag in tags" ng-if="article[0].tag[$index].name">
                     <span class="label"><a href="#/tags/details/{{article[0].tag[$index].name}}">{{article[0].tag[$index].name}}</a></span>
                   </div>
