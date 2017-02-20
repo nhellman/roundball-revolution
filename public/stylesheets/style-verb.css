@@ -2200,4 +2200,8 @@ figure figcaption {
   margin-right: 10px !important;
 }
 
+iframe.ta-insert-video {
+    min-height: 390px;
+}
+
 /*# sourceMappingURL=style.css.map */
