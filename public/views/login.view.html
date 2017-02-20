@@ -1,8 +1,24 @@
 <div ng-controller="LoginCtrl">
-  <div class="backend-container">
-  <h3 class="heading">Login</h3>
-    <div class="row">
-      <div class="col-md-8">
+
+  <header id="gtco-header" class="gtco-cover gtco-cover-xsm mb20" role="banner" style="background-image:url(images/img_1.jpg);" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 text-left">
+          <div class="display-t">
+            <div class="display-tc">
+              <span class="date-post">Backend</span>
+              <h1>Login</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container backend">
+		<div class="row">
+			<div class="col-sm-12 mb30">
         <div ng-show="error" class="alert alert-danger">{{errorMessage}}</div>
         <form class="form" ng-submit="login()">
           <fieldset>
@@ -25,4 +41,5 @@
       </div>
     </div>
   </div>
+
 </div>

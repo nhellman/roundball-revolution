@@ -2096,6 +2096,10 @@ figure figcaption {
   margin-bottom: 30px !important;
 }
 
+.mt30 {
+  margin-top: 30px !important;
+}
+
 .mb20 {
   margin-bottom: 20px !important;
 }
@@ -2185,7 +2189,7 @@ figure figcaption {
   background: #fff;
 }
 
-.backend img, article img {
+.backend img, article img, .tags img {
   width: 100% !important;
 }
 
