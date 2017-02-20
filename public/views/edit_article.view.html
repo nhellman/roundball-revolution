@@ -1,59 +1,82 @@
 <div ng-controller="ArticleEditCtrl">
-  <h3>Edit Article</h3>
-  <form ng-submit="updateArticle()">
-    <fieldset class="form-group">
-      <label>Headline</label>
-      <input type="text" class="form-control" ng-model="article.title" name="title" placeholder="Enter Headline">
-    </fieldset>
-    <fieldset class="form-group">
-      <label>Blurb</label>
-      <input type="text" class="form-control" ng-model="article.blurb" name="blurb" placeholder="Enter blurb">
-    </fieldset>
-    <fieldset class="form-group">
-      <label>Author</label>
-      <input type="text" class="form-control" ng-model="article.author" name="author" placeholder="Enter Author">
-    </fieldset>
-    <fieldset class="form-group">
-      <label>Image</label>
-      <input type="text" class="form-control" ng-model="article.image" name="image" placeholder="Enter Image URL">
-      <img ng-src="{{article.image}}">
-    </fieldset>
-    <fieldset class="form-group">
-      <label>Credit</label>
-      <input type="text" class="form-control" ng-model="article.credit" name="credit" placeholder="Enter Credit">
-    </fieldset>
-    <fieldset class="form-group">
-      <label>Category</label>
-      <select class="form-control" ng-model="article.category" name="category">
-        <option ng-repeat="category in categories" value="{{category.name}}">{{category.name}}</option>
-      </select>
-    </fieldset>
-    <fieldset class="form-group">
-      <label>Type</label>
-      <select class="form-control" ng-model="article.type" name="type">
-        <option ng-repeat="type in types" value="{{type.name}}">{{type.name}}</option>
-      </select>
-    </fieldset>
-    <fieldset class="form-group">
-      <label>Body</label>
-      <text-angular ng-model="article.body" name="body" rows="10" placeholder="Enter Article Body"></text-angular>
-    </fieldset>
-    <fieldset class="form-group">
-      <label>Featured</label>
-      <select class="form-control" ng-model="article.featured" name="featured">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-      </select>
-    </fieldset>    
-    <fieldset class="form-group">
-      <label>Tags</label>
-      <multiple-autocomplete ng-model="article.tag"
-                            object-property="name"
-                            api-url="tags"
-                            suggestions-arr=''>
-    </multiple-autocomplete>
-    <button type="submit" class="btn btn-default">Submit</button>
-    <a href="#" class="btn btn-danger" ng-click="removeArticle()">Delete</a>
-    <a href="#/categories" class="btn btn-warning">Cancel</a>
-  </form>
+
+  <header id="gtco-header" class="gtco-cover gtco-cover-xsm mb20" role="banner" style="background-image:url(images/img_1.jpg);" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 text-left">
+          <div class="display-t">
+            <div class="display-tc">
+              <span class="date-post">Edit Article</span>
+              <h1>Articles</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container backend">
+		<div class="row">
+			<div class="col-sm-12 mb30">
+        <form ng-submit="updateArticle()">
+          <fieldset class="form-group">
+            <label>Headline</label>
+            <input type="text" class="form-control" ng-model="article.title" name="title" placeholder="Enter Headline">
+          </fieldset>
+          <fieldset class="form-group">
+            <label>Blurb</label>
+            <input type="text" class="form-control" ng-model="article.blurb" name="blurb" placeholder="Enter blurb">
+          </fieldset>
+          <fieldset class="form-group">
+            <label>Author</label>
+            <input type="text" class="form-control" ng-model="article.author" name="author" placeholder="Enter Author">
+          </fieldset>
+          <fieldset class="form-group">
+            <label>Image</label>
+            <input type="text" class="form-control" ng-model="article.image" name="image" placeholder="Enter Image URL">
+            <img ng-src="{{article.image}}">
+          </fieldset>
+          <fieldset class="form-group">
+            <label>Credit</label>
+            <input type="text" class="form-control" ng-model="article.credit" name="credit" placeholder="Enter Credit">
+          </fieldset>
+          <fieldset class="form-group">
+            <label>Category</label>
+            <select class="form-control" ng-model="article.category" name="category">
+              <option ng-repeat="category in categories" value="{{category.name}}">{{category.name}}</option>
+            </select>
+          </fieldset>
+          <fieldset class="form-group">
+            <label>Type</label>
+            <select class="form-control" ng-model="article.type" name="type">
+              <option ng-repeat="type in types" value="{{type.name}}">{{type.name}}</option>
+            </select>
+          </fieldset>
+          <fieldset class="form-group">
+            <label>Body</label>
+            <text-angular ng-model="article.body" name="body" rows="10" placeholder="Enter Article Body"></text-angular>
+          </fieldset>
+          <fieldset class="form-group">
+            <label>Featured</label>
+            <select class="form-control" ng-model="article.featured" name="featured">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </fieldset>
+          <fieldset class="form-group">
+            <label>Tags</label>
+            <multiple-autocomplete ng-model="article.tag"
+                                  object-property="name"
+                                  api-url="tags"
+                                  suggestions-arr=''>
+          </multiple-autocomplete>
+          <button type="submit" class="btn btn-default">Submit</button>
+          <a href="#" class="btn btn-danger" ng-click="removeArticle()">Delete</a>
+          <a href="#/categories" class="btn btn-warning">Cancel</a>
+        </form>
+      </div>
+    </div>
+  </div>
+
 </div>
