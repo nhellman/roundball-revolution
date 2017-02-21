@@ -2208,4 +2208,15 @@ iframe.ta-insert-video {
     min-height: 390px;
 }
 
+.heading {
+  background: #F73859;
+  padding: 1em;
+}
+
+.heading h3 {
+  text-align: center;
+  color: #fff !important;
+  margin-bottom: 0px !important;
+}
+
 /*# sourceMappingURL=style.css.map */
