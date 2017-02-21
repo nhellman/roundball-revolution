@@ -128,8 +128,10 @@
     </div>
 
     <div class="row">
-      <div class="col-md-2">
-        <h3>Blazers</h3>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Portland Trail Blazers'">
+        <div class="col-md-2">
+          <h3>Blazers</h3>
+        </div>
       </div>
       <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Portland Trail Blazers'">
         <div class="col-md-2">
