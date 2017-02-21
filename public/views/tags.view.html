@@ -112,17 +112,43 @@
     </div>
 
     <div class="row">
-      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Atlanta Hawks'">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Denver Nuggets'">
         <div class="col-md-2">
           <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
         </div>
       </div>
-      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Atlanta Hawks'">
-        <div class="row">
-          <div class="col-md-2">
-            <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
-            <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
-          </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Denver Nuggets'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Minnesota Timberwolves'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Minnesota Timberwolves'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Oklahoma City Thunder'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Oklahoma City Thunder'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
         </div>
       </div>
     </div>
@@ -142,8 +168,10 @@
     </div>
 
     <div class="row">
-      <div class="col-md-2">
-        <h3>Jazz</h3>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Utah Jazz'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
       </div>
       <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Utah Jazz'">
         <div class="col-md-2">
@@ -152,6 +180,358 @@
         </div>
       </div>
     </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Golden State Warrior'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Golden State Warriors'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Los Angeles Clippers'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Los Angeles Clippers'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Los Angeles Lakers'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Los Angeles Lakers'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Phoenix Suns'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Phoenix Suns'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Sacramento Kings'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Sacramento Kings'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Dallas Mavericks'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Dallas Mavericks'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Houston Rockets'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Houston Rockets'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Memphis Grizzlies'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Memphis Grizzlies'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'New Orleans Pelicans'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'New Orleans Pelicans'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'San Antonio Spurs'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'San Antonio Spurs'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Chicago Bulls'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Chicago Bulls'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Cleveland Cavaliers'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Cleveland Cavaliers'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Detroit Pistons'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Detroit Pistons'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Indiana Pacers'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Indiana Pacers'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Milwaukee Bucks'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Milwaukee Bucks'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Boston Celtics'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Boston Celtics'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Brooklyn Nets'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Brooklyn Nets'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'New York Knicks'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'New York Knicks'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Philadelphia 76ers'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Philadelphia 76ers'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Toronto Raptors'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Toronto Raptors'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Atlanta Hawks'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Atlanta Hawks'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Charlotte Hornets'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Charlotte Hornets'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Miami Heat'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Miami Heat'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Orlando Magic'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Orlando Magic'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Washington Wizards'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Washington Wizards'">
+        <div class="col-md-2">
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+    </div>
+
+    <hr>
 
     <div class="row">
 			<div class="col-sm-12 mb30 mt30">
