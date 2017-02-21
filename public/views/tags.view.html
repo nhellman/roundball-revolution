@@ -31,7 +31,7 @@
       <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.division == 'northwest' && tag.type == 'team'">
         <div class="col-md-2">
           <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
-          <h4><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
         </div>
       </div>
     </div>
@@ -43,8 +43,8 @@
       </div>
       <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.division == 'pacific' && tag.type == 'team'">
         <div class="col-md-2">
-          <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
-          <h4><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
         </div>
       </div>
     </div>
@@ -55,8 +55,8 @@
       </div>
       <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.division == 'southwest' && tag.type == 'team'">
         <div class="col-md-2">
-          <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
-          <h4><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
         </div>
       </div>
     </div>
@@ -73,8 +73,8 @@
       </div>
       <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.division == 'central' && tag.type == 'team'">
         <div class="col-md-2">
-          <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
-          <h4><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
         </div>
       </div>
     </div>
@@ -85,8 +85,8 @@
       </div>
       <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.division == 'atlantic' && tag.type == 'team'">
         <div class="col-md-2">
-          <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
-          <h4><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
         </div>
       </div>
     </div>
@@ -97,8 +97,8 @@
       </div>
       <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.division == 'southeast' && tag.type == 'team'">
         <div class="col-md-2">
-          <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
-          <h4><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
         </div>
       </div>
     </div>
@@ -115,10 +115,10 @@
       <div class="col-md-2">
         <h3>Hawks</h3>
       </div>
-      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'hawks'">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Atlanta Hawks'">
         <div class="col-md-2">
-          <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
-          <h4><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
         </div>
       </div>
     </div>
@@ -127,10 +127,10 @@
       <div class="col-md-2">
         <h3>Blazers</h3>
       </div>
-      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'blazers'">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Portland Trail Blazers'">
         <div class="col-md-2">
-          <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
-          <h4><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
         </div>
       </div>
     </div>
@@ -139,10 +139,10 @@
       <div class="col-md-2">
         <h3>Jazz</h3>
       </div>
-      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'jazz'">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Utah Jazz'">
         <div class="col-md-2">
-          <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
-          <h4><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
         </div>
       </div>
     </div>
@@ -156,8 +156,8 @@
     <div class="row">
       <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.conference == 'none'">
         <div class="col-md-2">
-          <a href="/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
-          <h4><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h4>
+          <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
         </div>
       </div>
     </div>
