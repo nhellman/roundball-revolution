@@ -112,13 +112,17 @@
     </div>
 
     <div class="row">
-      <div class="col-md-2">
-        <h3>Hawks</h3>
-      </div>
-      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Atlanta Hawks'">
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'team' && tag.team == 'Atlanta Hawks'">
         <div class="col-md-2">
           <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
-          <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+        </div>
+      </div>
+      <div ng-repeat="tag in tags | orderBy: 'name'" ng-if="tag.type == 'player' && tag.team == 'Atlanta Hawks'">
+        <div class="row">
+          <div class="col-md-2">
+            <a href="#/tags/details/{{tag.name}}"><img class="team-logo" ng-src="{{tag.image}}" alt="{{tag.name}} logo"></a>
+            <h5><a class="center-block mt10 text-center" href="#/tags/details/{{tag.name}}">{{tag.name}}</a></h5>
+          </div>
         </div>
       </div>
     </div>
